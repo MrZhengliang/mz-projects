@@ -1,9 +1,11 @@
-#Thu Jan 15 09:30:14 GMT 2015
+#Thu Jan 15 14:52:03 GMT 2015
 eclipse.preferences.version=1
 encoding//client/MzInfo/addMz.html=UTF-8
 encoding//client/MzInfo/mzDetail.html=UTF-8
 encoding//client/MzInfo/mzList.html=UTF-8
+encoding//client/Public/css/mzuser/mzinfo.css=UTF-8
 encoding//client/Public/header.html=UTF-8
 encoding//client/Public/headerbanner.html=UTF-8
+encoding//client/Public/js/base.js=UTF-8
 encoding//client/Public/js/date/bootstrap-datetimepicker.js=UTF-8
 encoding/<project>=UTF-8

@@ -24,44 +24,55 @@ class MzInfoAction extends Action {
     	//展示所有漫展
 		$Articlecontent = M('Articlecontent');
 
-		$data['starttime']=time();
+		//$data['starttime']=time();
+
+
+		$date=date('Y-m-d');  //当前日期
+		$first=1; //$first =1 表示每周星期一为开始日期 0表示每周日为开始日期
+		$w=date('w',strtotime($date));  //获取当前周的第几天 周日是 0 周一到周六是 1 - 6
+		$now_start=date('Y-m-d',strtotime("$date -".($w ? $w - $first : 6).' days')); //获取本周开始日期，如果$w是0，则表示周日，减去 6 天
+		$now_end=date('Y-m-d',strtotime("$now_start +6 days"));  //本周结束日期
+		$last_start=date('Y-m-d',strtotime("$now_start - 7 days"));  //上周开始日期
+		$last_end=date('Y-m-d',strtotime("$now_start - 1 days"));  //上周结束日期
+
+		//echo '本周开始日期：',$now_start,'<br />';
+		//echo '本周结束日期：',$now_end,'<br />';
+		//echo '上周开始日期：',$last_start,'<br />';
+		//echo '上周结束日期：',$last_end,'<br />';
 
 		//$date['cid']='6';
 		//$arr = $Articlecontent->where($data)->find();
 
 		//var_dump($data);
 
-
-
 		//var_dump(date('y-m-d'));
-
 		//var_dump($this->getWeekRange(date('y-m-d')));
 
-
-		$dateDest = $this->getWeekRange(date('y-m-d'));//获取当前周的时间
+		//$dateDest = $this->getWeekRange(date('y-m-d'));//获取当前周的时间
 
 		//var_dump($dateDest);
-
 		//var_dump($dateDest['sdate']);
 		//var_dump($dateDest['edate']);
 
 
-		$data['starttime']=array('EGT',$dateDest['sdate']);//开始时间大于一周内的初始时间
-		$data['closetime']=array('ELT',$dateDest['edate']);//开始时间大于一周内的初始时间
+		//$data['starttime']=array('EGT',$dateDest['sdate']);//开始时间大于一周内的初始时间
+		//$data['closetime']=array('ELT',$dateDest['edate']);//开始时间大于一周内的初始时间
 
 		//$arr = $Articlecontent->where($data)->select();
 		//->join('RIGHT JOIN t_mz_attachment ON t_mz_attachment.aid = user_profile.typeid' );
 		$sql = 'select article.cid,article.title,article.starttime,article.closetime,article.address,article.cityname,article.faceimg,attach.filename,attach.newfilename ' .
 				'from t_mz_articlecontent as article, t_mz_attachment as attach where 1=1 ' .
 				' and article.faceimg=attach.aid ' .
-				' and article.starttime >= '.$dateDest['sdate'].'' .
-						' and article.closetime <= '.$dateDest['edate'];
+				' and date_format(article.starttime, "%Y%m%d") >= date_format("'.$now_start.'","%Y%m%d")' .
+						' and date_format(article.closetime, "%Y%m%d") <= date_format("'.$now_end.'","%Y%m%d")';
 		$voList = $Articlecontent->query($sql);
 		//var_dump($voList);
 
 		$this->assign('data',$voList);
 		//$this->assign('arr',$arr);
-    	$this->display();
+
+
+		$this->display();
     }
 
     /**

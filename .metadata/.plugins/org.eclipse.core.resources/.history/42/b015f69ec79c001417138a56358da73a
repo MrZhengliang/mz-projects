@@ -1,0 +1,113 @@
+<include file="Public:headerbanner" />
+	<load file="__CSS__/mzuser/mzinfo.css"/>
+	<script src="__JS__/jquery-1.9.1.min.js"></script>
+	<script src="__JS__/mzuser/mzinfo.js"></script>
+
+	<script type="text/javascript">
+
+	</script>
+
+	<div class="mzinfo_content">
+		<div id="mzinfo_head">
+			<a class="show left ml20 mr20" title="半次元-漫展频道" href="/expo">
+				<img class="show" src="__IMAGE__/header_nav_back3.png?20140608">
+			</a>
+			<ul>
+				<li><a href="__APP__/Index/index">返回首页</a></li>
+				<li><a>全部漫展</a></li>
+				<li><a>我参加的</a></li>
+			</ul>
+		</div>
+
+		<div id="mzinfo_box">
+			<div class="mzinfo_box_l">
+				<div class="box_l_h">
+					<div id="box_l_h_time" class="box_l_h_time">
+						<a class="prev left box_l_h_time_prev">&lt;</a>
+						<div class="box_l_h_time_all">
+							<ul id="box_l_h_time_ul">
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+									<a onclick="clickExpoDate('2014-08-25',this)" href="javascript:void(0);">08月25日~08月31日</a>
+								</li>
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+									<a onclick="clickExpoDate('2014-09-01',this)" href="javascript:void(0);">上&nbsp;&nbsp;周</a>
+								</li>
+								<li class="left lineS_left on" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+									<a onclick="clickExpoDate('2014-09-01',this)" href="javascript:void(0);">本&nbsp;&nbsp;周</a>
+								</li>
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+									<a onclick="clickExpoDate('2014-09-01',this)" href="javascript:void(0);">下&nbsp;&nbsp;周</a>
+								</li>
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+									<a onclick="clickExpoDate('2014-09-22',this)" href="javascript:void(0);">09月22日~09月28日</a>
+								</li>
+							</ul>
+						</div>
+						<a class="next right box_l_h_time_next lineS_left">&gt;</a>
+					</div>
+				</div>
+
+				<ul class="box_l_h_c">
+					<div id="container" class="box_l_h_c_show">
+						<volist name='data' id='mzlist'>
+							<li class="box_l_h_c_li" style="transform: translate(0px, 0px);">
+								<a title="<{$mzlist.filename}>" target="_blank" href="/party/expodetail/<{$mzlist.faceimg}>">
+									<img class="img_show" src="http://www.cos450.com/Uploads/<{$mzlist.newfilename}>">
+								</a>
+								<div class="party_l_right">
+									<a class="flarge lwf mb10 ttl overflowH" title="<{$mzlist.title}>" target="_blank" href="__URL__/mzDetail/cid/<{$mzlist.cid}>">
+										<{$mzlist.title}>
+									</a>
+									<p class="lwf mb10 lh1em"> 时间：<{$mzlist.starttime}> ~ <{$mzlist.closetime}> </p>
+									<p class="lwf autocut lh1em"> 地址：<{$mzlist.address}></p>
+
+									<div class="left party_l_cc">
+										<div class="party_l_ccc">
+											<div class="party_loc_pic left"></div>
+											<p class="left"><{$mzlist.cityname}></p>
+										</div>
+										<div class="left party_l_ddd">
+											<p class="left">1人参加</p>
+										</div>
+										<div class="left party_l_eee">
+											<p class="left">0张场照</p>
+										</div>
+									</div>
+
+									<div class="go_detail">
+										<a class="cosgo_d" href="__URL__/mzDetail/cid/<{$mzlist.cid}>">
+											查看详情&gt;&gt;
+										</a>
+									</div>
+								</div>
+							</li>
+						</volist>
+
+
+					</div>
+					<div class="box_l_empty_block" style="display: none;">本周暂时没有漫展哟，去别的时间段看看吧~</div>
+				</ul>
+			</div>
+
+			<div class="mzinfo_box_r">
+				<div class="box_r_h">
+					<a href="__URL__/addMz" target="_blank">发布新漫展</a>
+					<a href="__APP__/unCompleteMz" target="_blank">补充之前漫展</a>
+				</div>
+
+				<div class="mz_area">
+					<div class="title_r"><p>漫展地区</p></div>
+					<ul id="area_ul">
+						<div class="mz_area_all">
+							<li class="on"><a>全部(100)</a></li>
+							<li><a>北京(55)</a></li>
+							<li><a>上海(25)</a></li>
+							<li><a>广州(10)</a></li>
+							<li><a>天津(10)</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
