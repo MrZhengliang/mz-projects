@@ -153,6 +153,7 @@ class MzInfoAction extends Action {
 		$data["email"] = $_POST['contact_email'];    //邮箱
 
 		$data["uid"] = $_POST['userId'];    //userid
+		$data["idtype"] = 2;    //内容来源:网站会员默认2
 
 		$data["title"] = $_POST['title'];//漫展名称
 		$data["privurl"] = $_POST['url'];//个性域名

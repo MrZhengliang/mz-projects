@@ -4,7 +4,7 @@ dir
 201
 https://svn.sinaapp.com/happy95/1/ThinkPHP/Runtime
 https://svn.sinaapp.com/happy95
-
+delete
 
 
 2014-08-19T14:21:16.422770Z
@@ -28,13 +28,29 @@ svn:special svn:externals svn:needs-lock
 
 Cache
 dir
+
+
+
+delete
 
 Logs
 dir
+
+
+
+delete
 
 Temp
 dir
+
+
+
+delete
 
 Data
 dir
+
+
+
+delete
 
