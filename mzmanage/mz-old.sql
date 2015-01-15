@@ -1,41 +1,19 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : spaltform
-Source Server Version : 50520
+Source Server         : 本地
+Source Server Version : 50508
 Source Host           : localhost:3306
 Source Database       : mz
 
 Target Server Type    : MYSQL
-Target Server Version : 50520
+Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2015-01-15 17:06:58
+Date: 2015-01-11 22:48:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for `t_mz_announcement`
--- ----------------------------
-DROP TABLE IF EXISTS `t_mz_announcement`;
-CREATE TABLE `t_mz_announcement` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '公告表主键id',
-  `content` text COMMENT '公告内容',
-  `link` varchar(200) DEFAULT NULL COMMENT '公告链接',
-  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
-  `area_code` varchar(20) DEFAULT NULL COMMENT '发布地区',
-  `title` varchar(50) DEFAULT NULL COMMENT '公告标题',
-  `notice_type` tinyint(1) DEFAULT NULL COMMENT '1:普通公告；2：刺客笔记',
-  `image_path` varchar(200) DEFAULT NULL COMMENT '图片存放路径',
-  `image_url` varchar(200) DEFAULT NULL COMMENT '图片url连接地址',
-  `status` tinyint(1) DEFAULT NULL COMMENT '审核状态 0 待审核 1 审核通过 2 审核驳回 3 过期 默认为0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of t_mz_announcement
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for `t_mz_area`
@@ -71,8 +49,8 @@ INSERT INTO `t_mz_area` VALUES ('11', '222', '黄石', '2', '22');
 DROP TABLE IF EXISTS `t_mz_articlecontent`;
 CREATE TABLE `t_mz_articlecontent` (
   `cid` mediumint(8) NOT NULL AUTO_INCREMENT COMMENT ' 内容ID',
-  `uid` mediumint(8) DEFAULT NULL COMMENT '用户ID;与idType对应为管理人员id和网站会员id',
-  `idtype` tinyint(1) DEFAULT NULL COMMENT '漫展文章来源id，1 来源管理系统人员  2 来源网站会员',
+  `uid` mediumint(8) DEFAULT NULL COMMENT '用户ID',
+  `idtype` tinyint(1) DEFAULT NULL,
   `telephone` char(40) DEFAULT NULL COMMENT '电话',
   `qqcode` char(40) DEFAULT NULL COMMENT 'QQ',
   `email` char(40) DEFAULT NULL COMMENT '邮箱',
@@ -82,21 +60,29 @@ CREATE TABLE `t_mz_articlecontent` (
   `lat` varchar(50) DEFAULT NULL COMMENT '地图经度',
   `lng` varchar(50) DEFAULT NULL COMMENT '地图纬度',
   `address` varchar(100) DEFAULT NULL COMMENT '详细地址',
-  `starttime` datetime DEFAULT NULL COMMENT '开始时间',
-  `closetime` datetime DEFAULT NULL COMMENT '结束时间',
+  `starttime` varchar(14) DEFAULT NULL COMMENT '开始时间',
+  `closetime` varchar(14) DEFAULT NULL COMMENT '结束时间',
   `pricetype` tinyint(1) DEFAULT NULL COMMENT '票价方式 1 免费  2 收费',
   `price` smallint(8) DEFAULT NULL COMMENT '当pricetype为2时，设置票价',
   `tickettype` varchar(50) DEFAULT NULL COMMENT '订票方式',
   `netticketaddress` varchar(255) DEFAULT NULL COMMENT '网络售票地址',
   `content` text COMMENT '漫展简介',
-  `dateline` datetime DEFAULT NULL COMMENT '添加时间',
+  `dateline` varchar(14) DEFAULT NULL COMMENT '添加时间',
   `faceimg` mediumint(8) DEFAULT NULL COMMENT '漫展封面图片,对应t_mz_attachment表的aid',
   PRIMARY KEY (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='门户文章漫展内容表';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='门户文章漫展内容表';
 
 -- ----------------------------
 -- Records of t_mz_articlecontent
 -- ----------------------------
+INSERT INTO `t_mz_articlecontent` VALUES ('1', null, '1', '15010396104', '981233589', '', '测试1', '测试1', '北京', '39.90692', '116.451017', '北京市北京市东城区忠实里南街', '2014', '2014', '2', '99', '网络', '少打点', '阿斯顿发士大夫王企鹅王企鹅', null, '47');
+INSERT INTO `t_mz_articlecontent` VALUES ('2', null, '2', '', '', '', '', '', '北京', '39.898949', '116.427158', '北京市北京市东城区广渠门内大街90-22号', '2014', '2014', '2', '50', '网络购票', 'http://www.tmall.com/777555.shtml', '测试测试测试测试测试测试测试测试测试测试测试测试', null, '48');
+INSERT INTO `t_mz_articlecontent` VALUES ('3', null, '2', '15010396104', '123981233', '', '', '', '', '', '', '', '0', '0', '1', '0', '', '', '', null, '0');
+INSERT INTO `t_mz_articlecontent` VALUES ('4', null, '1', '15010396104', '123981233', '', '', '', '', '', '', '', '0', '0', '1', '0', '', '', '', null, '0');
+INSERT INTO `t_mz_articlecontent` VALUES ('5', '14', '1', '15010396104', '', '', '测试2', '测试2', '北京', '39.900278', '116.449005', '北京市北京市东城区广渠门内大街丙7号', '2014', '2014', '1', '0', '网络购票', 'http://www.tmall.com/777555.shtml', '测试测试肉肉肉肉肉肉肉死是是是是', null, '49');
+INSERT INTO `t_mz_articlecontent` VALUES ('6', '14', '2', '', '981233589', '', '测试3', '测试3', '北京', '39.932596', '116.475738', '北京市北京市朝阳区团结湖中路南一条2号', '20141114', '20141231', '2', '25', '网络购票', 'http://www.tmall.com/777555.shtml', '测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3', null, '50');
+INSERT INTO `t_mz_articlecontent` VALUES ('7', '14', '2', '15010396104', '', '', '测试4', '测试4', '北京', '39.867828', '116.680243', '北京市北京市通州区群芳南街', '1412006400', '1419955200', '2', '70', '网络购票', 'http://www.tmall.com/777555.shtml', '测试4测试4测试4测试4测试4测试4测试4测试4测试4', null, '51');
+INSERT INTO `t_mz_articlecontent` VALUES ('8', '14', '1', '15010396104', '', '', '测试5', '测试5', '北京', '39.914552', '116.527316', '北京市北京市朝阳区建国路35号-东2门', '1412092800', '1412438400', '2', '15', '网络购票', 'http://www.tmall.com/777555.shtml', '测试5测试5测试5测试5测试5测试5测试5测试5测试5', null, '52');
 
 -- ----------------------------
 -- Table structure for `t_mz_attachment`
@@ -110,50 +96,49 @@ CREATE TABLE `t_mz_attachment` (
   `filename` varchar(100) DEFAULT NULL COMMENT '文件原名称',
   `newfilename` varchar(100) DEFAULT NULL COMMENT '上传的文件新名称',
   `filepath` varchar(100) DEFAULT NULL COMMENT '文件保存路径',
-  `uploadtime` datetime DEFAULT NULL COMMENT '上传时间',
+  `uploadtime` int(10) DEFAULT NULL COMMENT '上传时间',
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COMMENT='附件信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 COMMENT='附件信息表';
 
 -- ----------------------------
 -- Records of t_mz_attachment
 -- ----------------------------
-INSERT INTO `t_mz_attachment` VALUES ('18', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef23310da0.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('19', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef2a21248c.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('20', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef3035cb37.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('21', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef3246c18a.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('22', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef34fe688b.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('23', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef3cc60edc.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('24', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef48fe7bb1.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('25', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef4bf9b056.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('26', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef517a5bde.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('27', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef56a2833c.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('28', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef57768465.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('29', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef59d1d1a9.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('30', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef5abed1a1.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('31', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef76a03fcb.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('32', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef8b1a5f0e.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('33', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54201cd2e0585.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('34', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54201cff8a35b.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('35', '1', '14', null, 'csdn博客排名20140923.png', '542421cc4aaba.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('36', '1', '14', null, 'csdn博客排名20140923.png', '542421d29f1c9.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('37', '1', '14', null, 'csdn博客排名20140923.png', '5424241704d3b.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('38', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '5424243a38af1.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('39', '1', '14', null, 'csdn博客排名20140923.png', '5424291840883.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('40', '1', '14', null, 'csdn博客排名20140923.png', '54242bcc03a36.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('41', '1', '14', null, 'csdn博客排名20140923.png', '54242c147765d.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('42', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242c5c4a95c.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('43', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242c87c9851.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('44', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242cf6f23f7.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('45', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242d07b0d74.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('46', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242daed4d7b.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('47', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242e50c5807.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('48', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '5427b578a21a4.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('49', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542aa630989dc.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('50', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab0e45b291.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('51', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab31999617.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('52', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab9e6c1808.png', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('53', '1', '14', null, '1d2890da99fcd48692a3c46e9972e568.jpg', '54702fe7cbb26.jpg', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('54', '1', '14', null, 'Penguins.jpg', '54b7551e2c2bd.jpg', '/Uploads/images/', null);
+INSERT INTO `t_mz_attachment` VALUES ('18', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef23310da0.png', '/Uploads/images/', '1411314227');
+INSERT INTO `t_mz_attachment` VALUES ('19', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef2a21248c.png', '/Uploads/images/', '1411314338');
+INSERT INTO `t_mz_attachment` VALUES ('20', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef3035cb37.png', '/Uploads/images/', '1411314435');
+INSERT INTO `t_mz_attachment` VALUES ('21', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef3246c18a.png', '/Uploads/images/', '1411314468');
+INSERT INTO `t_mz_attachment` VALUES ('22', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef34fe688b.png', '/Uploads/images/', '1411314511');
+INSERT INTO `t_mz_attachment` VALUES ('23', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef3cc60edc.png', '/Uploads/images/', '1411314636');
+INSERT INTO `t_mz_attachment` VALUES ('24', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef48fe7bb1.png', '/Uploads/images/', '1411314831');
+INSERT INTO `t_mz_attachment` VALUES ('25', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef4bf9b056.png', '/Uploads/images/', '1411314879');
+INSERT INTO `t_mz_attachment` VALUES ('26', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef517a5bde.png', '/Uploads/images/', '1411314967');
+INSERT INTO `t_mz_attachment` VALUES ('27', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef56a2833c.png', '/Uploads/images/', '1411315050');
+INSERT INTO `t_mz_attachment` VALUES ('28', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef57768465.png', '/Uploads/images/', '1411315063');
+INSERT INTO `t_mz_attachment` VALUES ('29', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef59d1d1a9.png', '/Uploads/images/', '1411315101');
+INSERT INTO `t_mz_attachment` VALUES ('30', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef5abed1a1.png', '/Uploads/images/', '1411315116');
+INSERT INTO `t_mz_attachment` VALUES ('31', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef76a03fcb.png', '/Uploads/images/', '1411315562');
+INSERT INTO `t_mz_attachment` VALUES ('32', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '541ef8b1a5f0e.png', '/Uploads/images/', '1411315889');
+INSERT INTO `t_mz_attachment` VALUES ('33', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54201cd2e0585.png', '/Uploads/images/', '1411390675');
+INSERT INTO `t_mz_attachment` VALUES ('34', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54201cff8a35b.png', '/Uploads/images/', '1411390719');
+INSERT INTO `t_mz_attachment` VALUES ('35', '1', '14', null, 'csdn博客排名20140923.png', '542421cc4aaba.png', '/Uploads/images/', '1411654092');
+INSERT INTO `t_mz_attachment` VALUES ('36', '1', '14', null, 'csdn博客排名20140923.png', '542421d29f1c9.png', '/Uploads/images/', '1411654098');
+INSERT INTO `t_mz_attachment` VALUES ('37', '1', '14', null, 'csdn博客排名20140923.png', '5424241704d3b.png', '/Uploads/images/', '1411654679');
+INSERT INTO `t_mz_attachment` VALUES ('38', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '5424243a38af1.png', '/Uploads/images/', '1411654714');
+INSERT INTO `t_mz_attachment` VALUES ('39', '1', '14', null, 'csdn博客排名20140923.png', '5424291840883.png', '/Uploads/images/', '1411655960');
+INSERT INTO `t_mz_attachment` VALUES ('40', '1', '14', null, 'csdn博客排名20140923.png', '54242bcc03a36.png', '/Uploads/images/', '1411656652');
+INSERT INTO `t_mz_attachment` VALUES ('41', '1', '14', null, 'csdn博客排名20140923.png', '54242c147765d.png', '/Uploads/images/', '1411656724');
+INSERT INTO `t_mz_attachment` VALUES ('42', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242c5c4a95c.png', '/Uploads/images/', '1411656796');
+INSERT INTO `t_mz_attachment` VALUES ('43', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242c87c9851.png', '/Uploads/images/', '1411656839');
+INSERT INTO `t_mz_attachment` VALUES ('44', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242cf6f23f7.png', '/Uploads/images/', '1411656951');
+INSERT INTO `t_mz_attachment` VALUES ('45', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242d07b0d74.png', '/Uploads/images/', '1411656967');
+INSERT INTO `t_mz_attachment` VALUES ('46', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242daed4d7b.png', '/Uploads/images/', '1411657134');
+INSERT INTO `t_mz_attachment` VALUES ('47', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '54242e50c5807.png', '/Uploads/images/', '1411657296');
+INSERT INTO `t_mz_attachment` VALUES ('48', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '5427b578a21a4.png', '/Uploads/images/', '1411888504');
+INSERT INTO `t_mz_attachment` VALUES ('49', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542aa630989dc.png', '/Uploads/images/', '1412081200');
+INSERT INTO `t_mz_attachment` VALUES ('50', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab0e45b291.png', '/Uploads/images/', '1412083940');
+INSERT INTO `t_mz_attachment` VALUES ('51', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab31999617.png', '/Uploads/images/', '1412084505');
+INSERT INTO `t_mz_attachment` VALUES ('52', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab9e6c1808.png', '/Uploads/images/', '1412086246');
+INSERT INTO `t_mz_attachment` VALUES ('53', '1', '14', null, '1d2890da99fcd48692a3c46e9972e568.jpg', '54702fe7cbb26.jpg', '/Uploads/images/', '1416638439');
 
 -- ----------------------------
 -- Table structure for `t_mz_group`
@@ -193,7 +178,7 @@ CREATE TABLE `t_mz_user` (
   `adminid` tinyint(1) DEFAULT NULL COMMENT '管理员id',
   `groupid` smallint(6) DEFAULT NULL COMMENT '会员组id',
   `credits` int(10) DEFAULT NULL COMMENT '总积分',
-  `regdate` datetime DEFAULT NULL COMMENT '注册时间',
+  `regdate` int(10) DEFAULT NULL COMMENT '注册时间',
   `timeoffset` char(4) DEFAULT NULL COMMENT '时区校正',
   `conisbind` tinyint(1) DEFAULT NULL COMMENT ' 用户是否绑定QC',
   `provincecode` varchar(20) DEFAULT NULL,
@@ -208,10 +193,10 @@ CREATE TABLE `t_mz_user` (
 -- ----------------------------
 -- Records of t_mz_user
 -- ----------------------------
-INSERT INTO `t_mz_user` VALUES ('14', '981233589@qq.com', '测试大牛', '小不懂', '4297f44b13955235245b2497399d7a93', '1', null, null, null, null, '4', null, null, null, null, '12', '上海', '12', '上海', '1', 'I love php too!12请问ddd');
-INSERT INTO `t_mz_user` VALUES ('15', '414402216@qq.com', '测试大牛', '必须的', '4297f44b13955235245b2497399d7a93', '1', null, null, null, null, '4', null, null, null, null, '22', null, '221', null, '1', '鹅鹅鹅饿饿');
-INSERT INTO `t_mz_user` VALUES ('16', '9812335891@qq.com', '测试大牛', '有名字的', '4297f44b13955235245b2497399d7a93', '9', null, null, null, null, '2', null, null, null, null, '22', null, '221', null, '1', '鹅鹅鹅饿饿');
-INSERT INTO `t_mz_user` VALUES ('17', '9812335892@qq.com', '测试大牛', '秘密', '4297f44b13955235245b2497399d7a93', '1', null, null, null, null, '4', null, null, null, null, '22', null, '221', null, '1', '鹅鹅鹅饿饿');
+INSERT INTO `t_mz_user` VALUES ('14', '981233589@qq.com', '测试大牛', '小不懂', '4297f44b13955235245b2497399d7a93', null, null, null, null, null, '4', null, '1409377525', null, null, '22', '', '221', '', '1', 'I love php too!12请问ddd');
+INSERT INTO `t_mz_user` VALUES ('15', '414402216@qq.com', '测试大牛', null, '4297f44b13955235245b2497399d7a93', null, null, null, null, null, '4', null, '1409465507', null, null, '22', null, '221', null, '1', '鹅鹅鹅饿饿');
+INSERT INTO `t_mz_user` VALUES ('16', '9812335891@qq.com', '测试大牛', null, '4297f44b13955235245b2497399d7a93', null, null, null, null, null, '2', null, '1409465620', null, null, '22', null, '221', null, '1', '鹅鹅鹅饿饿');
+INSERT INTO `t_mz_user` VALUES ('17', '9812335892@qq.com', '测试大牛', null, '4297f44b13955235245b2497399d7a93', null, null, null, null, null, '4', null, '1409465694', null, null, '22', null, '221', null, '1', '鹅鹅鹅饿饿');
 
 -- ----------------------------
 -- Table structure for `t_sh_user`
