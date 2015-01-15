@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html lang="zh-cn">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<script src="__JS__/mzuser/login.js"></script>
-	<load file="__CSS__/mzuser/login.css"/>
+	<link rel="stylesheet" type="text/css" href="__CSS__/mzuser/login.css" />
 	<script src="__JS__/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
 		$(function(){

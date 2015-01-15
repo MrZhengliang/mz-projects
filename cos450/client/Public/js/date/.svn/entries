@@ -28,4 +28,8 @@ svn:special svn:externals svn:needs-lock
 
 lhgcalendar
 dir
+
+
+
+delete
 

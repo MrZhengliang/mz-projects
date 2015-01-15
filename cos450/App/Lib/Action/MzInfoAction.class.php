@@ -162,8 +162,8 @@ class MzInfoAction extends Action {
 		$data["lat"] = $_POST['lat'];//地图纬度
 		$data["address"] = $_POST['address'];//详细地址
 
-		$data["starttime"] = strtotime($_POST['startDate']);//开始时间
-		$data["closetime"] = strtotime($_POST['endDate']);//结束时间
+		$data["starttime"] = $_POST['startDate'];//开始时间
+		$data["closetime"] = $_POST['endDate'];//结束时间
 
  		$data["pricetype"] = $_POST['fee_opt'];//票价类型
  		$data["price"] = $_POST['price'];//票价

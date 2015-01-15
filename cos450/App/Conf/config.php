@@ -26,6 +26,7 @@ return array(
 		//'__JS__'=>'/think_php/Public/Js',
 		'__CSS__'=>__ROOT__.'/client/Public/css',
 		'__JS__'=>__ROOT__.'/client/Public/js',
+		'__FONT__'=>__ROOT__.'/client/Public/font',
 		'__IMAGE__'=>__ROOT__.'/client/Public/images',
 		'/Uploads'=>__ROOT__.'/Uploads/images',
 	),
