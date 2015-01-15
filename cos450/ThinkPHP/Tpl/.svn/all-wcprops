@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/happy95/!svn/ver/2/1/ThinkPHP/Tpl
+END
+dispatch_jump.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/happy95/!svn/ver/2/1/ThinkPHP/Tpl/dispatch_jump.tpl
+END
+page_trace.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/happy95/!svn/ver/2/1/ThinkPHP/Tpl/page_trace.tpl
+END
+default_index.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/happy95/!svn/ver/2/1/ThinkPHP/Tpl/default_index.tpl
+END
+think_exception.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/happy95/!svn/ver/2/1/ThinkPHP/Tpl/think_exception.tpl
+END

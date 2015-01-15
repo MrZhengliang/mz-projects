@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/happy95/!svn/ver/2/1/ThinkPHP/Extend/Engine/Cluster/Lib/Behavior
+END
+ParseTemplateBehavior.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/happy95/!svn/ver/2/1/ThinkPHP/Extend/Engine/Cluster/Lib/Behavior/ParseTemplateBehavior.class.php
+END
+WriteHtmlCacheBehavior.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/happy95/!svn/ver/2/1/ThinkPHP/Extend/Engine/Cluster/Lib/Behavior/WriteHtmlCacheBehavior.class.php
+END
+ReadHtmlCacheBehavior.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/happy95/!svn/ver/2/1/ThinkPHP/Extend/Engine/Cluster/Lib/Behavior/ReadHtmlCacheBehavior.class.php
+END

@@ -1,0 +1,8 @@
+<!-- 模版的继承,基础模板 -->
+<block name='top'>
+
+</block>
+<div style='border:1px solid gray;background:#abcdef;height:100px;'>广告部分</div>
+<block name='body'>
+
+</block>

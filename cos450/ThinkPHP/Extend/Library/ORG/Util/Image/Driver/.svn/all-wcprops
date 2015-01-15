@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/happy95/!svn/ver/71/1/ThinkPHP/Extend/Library/ORG/Util/Image/Driver
+END
+GIF.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/happy95/!svn/ver/71/1/ThinkPHP/Extend/Library/ORG/Util/Image/Driver/GIF.class.php
+END
+ImageImagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/happy95/!svn/ver/71/1/ThinkPHP/Extend/Library/ORG/Util/Image/Driver/ImageImagick.class.php
+END
+ImageGd.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/happy95/!svn/ver/71/1/ThinkPHP/Extend/Library/ORG/Util/Image/Driver/ImageGd.class.php
+END
