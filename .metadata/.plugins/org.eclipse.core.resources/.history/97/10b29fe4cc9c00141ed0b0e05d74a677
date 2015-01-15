@@ -254,7 +254,7 @@ h2{
 }
 
 .box_l_h_c li{
-
+    white-space:nowrap;
     display:block;
     float:left;
     margin:20px 0 0 20px;

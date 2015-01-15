@@ -1,7 +1,9 @@
 * {
 	padding: 0;
 	margin: 0;
-    font-family: "å¾®è½¯é›…é»‘","å®‹ä½“","é»‘ä½“",arial,sans-serif;
+}
+* {
+    font-family: "Î¢ÈíÑÅºÚ","ËÎÌå","ºÚÌå",arial,sans-serif;
     word-wrap: break-word;
 }
 /* Media quires for a responsive layout */

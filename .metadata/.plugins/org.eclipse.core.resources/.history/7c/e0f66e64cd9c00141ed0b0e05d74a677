@@ -26,19 +26,19 @@
 						<a class="prev left box_l_h_time_prev">&lt;</a>
 						<div class="box_l_h_time_all">
 							<ul id="box_l_h_time_ul">
-								<li class="left lineS_left" style="overflow: hidden; float: left; width: 129px; height: 28px;">
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 126px; height: 28px;">
 									<a onclick="clickExpoDate('2014-08-25',this)" href="javascript:void(0);">08月25日~08月31日</a>
 								</li>
-								<li class="left lineS_left" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 118px; height: 28px;">
 									<a onclick="clickExpoDate('2014-09-01',this)" href="javascript:void(0);">上&nbsp;&nbsp;周</a>
 								</li>
-								<li class="left lineS_left on" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+								<li class="left lineS_left on" style="overflow: hidden; float: left; width: 118px; height: 28px;">
 									<a onclick="clickExpoDate('2014-09-01',this)" href="javascript:void(0);">本&nbsp;&nbsp;周</a>
 								</li>
-								<li class="left lineS_left" style="overflow: hidden; float: left; width: 119px; height: 28px;">
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 118px; height: 28px;">
 									<a onclick="clickExpoDate('2014-09-01',this)" href="javascript:void(0);">下&nbsp;&nbsp;周</a>
 								</li>
-								<li class="left lineS_left" style="overflow: hidden; float: left; width: 129px; height: 28px;">
+								<li class="left lineS_left" style="overflow: hidden; float: left; width: 126px; height: 28px;">
 									<a onclick="clickExpoDate('2014-09-22',this)" href="javascript:void(0);">09月22日~09月28日</a>
 								</li>
 							</ul>

@@ -438,3 +438,309 @@ svn: Entry '' has invalid node kind
 
 !ENTRY org.eclipse.ui 4 4 2015-01-15 15:08:54.771
 !MESSAGE Invalid Menu Extension (Path is invalid): net.sf.eclipsetidy.NatureObjectAction
+!SESSION 2015-01-15 15:40:17.252 -----------------------------------------------
+eclipse.buildId=M20070212-1330
+java.version=1.5.0_09
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-01-15 15:40:20.674
+!MESSAGE A workspace crash was detected. The previous session did not exit normally.
+
+!ENTRY org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Warnings while parsing the view contributions from the 'org.eclipse.ui.viewActions' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction1'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction2'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction3'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction4'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction1'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction2'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction3'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 15:40:21.284
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction4'
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 15:40:28.364
+!MESSAGE While loading class "net.sourceforge.phpeclipse.PHPeclipsePlugin$3$1", thread "Worker-0" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-0" is proceeding but "net.sourceforge.phpeclipse.PHPeclipsePlugin$3$1" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpeclipse.PHPeclipsePlugin$3.run(PHPeclipsePlugin.java:1182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+!SESSION 2015-01-15 16:38:44.354 -----------------------------------------------
+eclipse.buildId=M20070212-1330
+java.version=1.5.0_09
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Warnings while parsing the view contributions from the 'org.eclipse.ui.viewActions' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction1'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction2'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction3'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction4'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction1'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction2'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.135
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction3'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-15 16:38:48.136
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction4'
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:38:57.465
+!MESSAGE While loading class "net.sourceforge.phpeclipse.PHPeclipsePlugin$3$1", thread "Worker-2" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-2" is proceeding but "net.sourceforge.phpeclipse.PHPeclipsePlugin$3$1" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpeclipse.PHPeclipsePlugin$3.run(PHPeclipsePlugin.java:1182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:02.579
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.DeltaProcessor", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.DeltaProcessor" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.getDeltaProcessor(DeltaProcessingState.java:215)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:151)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:07.697
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.DeltaProcessor$1FoundRelevantDeltaException", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.DeltaProcessor$1FoundRelevantDeltaException" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.getDeltaProcessor(DeltaProcessingState.java:215)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:151)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:12.809
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.JavaProject", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.JavaProject" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.getDeltaProcessor(DeltaProcessingState.java:215)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:151)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:17.928
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.DeltaProcessor$1", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.DeltaProcessor$1" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessor.isAffectedBy(DeltaProcessor.java:1193)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1651)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:151)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:23.063
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.builder.PHPBuilder", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.builder.PHPBuilder" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1659)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:155)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:28.180
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.builder.MissingSourceFileException", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.builder.MissingSourceFileException" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1659)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:155)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:33.302
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.builder.MissingClassFileException", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.builder.MissingClassFileException" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1659)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:155)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-15 16:39:38.485
+!MESSAGE While loading class "net.sourceforge.phpdt.internal.core.builder.ImageBuilderInternalException", thread "Worker-3" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-3" is proceeding but "net.sourceforge.phpdt.internal.core.builder.ImageBuilderInternalException" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1659)
+	at net.sourceforge.phpdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:419)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:155)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.core.resources 4 273 2015-01-15 16:40:15.220
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2015-01-15 16:40:15.220
+!MESSAGE Could not delete: /cos450/App/Runtime.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:222)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:332)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:771)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1639)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:695)
+	at org.eclipse.ui.actions.DeleteResourceAction.delete(DeleteResourceAction.java:476)
+	at org.eclipse.ui.actions.DeleteResourceAction.delete(DeleteResourceAction.java:447)
+	at org.eclipse.ui.actions.DeleteResourceAction.access$2(DeleteResourceAction.java:436)
+	at org.eclipse.ui.actions.DeleteResourceAction$4.run(DeleteResourceAction.java:600)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1737)
+	at org.eclipse.ui.actions.DeleteResourceAction$3.run(DeleteResourceAction.java:596)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2015-01-15 16:40:15.220
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 3 org.eclipse.core.resources 4 274 2015-01-15 16:40:15.220
+!MESSAGE Resource is out of sync with the file system: /cos450/App/Runtime/Cache/9cd3039fa593fead5108f9a1aa683dcd.php.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2015-01-15 16:40:15.220
+!MESSAGE Resource is out of sync with the file system: /cos450/App/Runtime/Cache/9cd3039fa593fead5108f9a1aa683dcd.php.
+
+!ENTRY org.eclipse.ui 4 4 2015-01-15 16:40:20.878
+!MESSAGE Invalid Menu Extension (Path is invalid): net.sf.eclipsetidy.NatureObjectAction

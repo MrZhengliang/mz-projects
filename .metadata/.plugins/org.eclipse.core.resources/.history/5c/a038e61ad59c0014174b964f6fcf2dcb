@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 本地
-Source Server Version : 50508
+Source Server         : spaltform
+Source Server Version : 50520
 Source Host           : localhost:3306
 Source Database       : mz
 
 Target Server Type    : MYSQL
-Target Server Version : 50508
+Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2015-01-15 23:22:58
+Date: 2015-01-15 17:06:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -92,14 +92,11 @@ CREATE TABLE `t_mz_articlecontent` (
   `dateline` datetime DEFAULT NULL COMMENT '添加时间',
   `faceimg` mediumint(8) DEFAULT NULL COMMENT '漫展封面图片,对应t_mz_attachment表的aid',
   PRIMARY KEY (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='门户文章漫展内容表';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='门户文章漫展内容表';
 
 -- ----------------------------
 -- Records of t_mz_articlecontent
 -- ----------------------------
-INSERT INTO `t_mz_articlecontent` VALUES ('13', '14', '2', '15010396104', '321321', '321321@qq.com', '测试2', '测试2', '北京', '39.916484', '116.36248', '北京市北京市西城区北大街1号楼-306室', '2014-12-01 00:55:28', '2014-12-31 23:55:28', '2', '50', '网络购票', 'http://www.tmall.com/777555.shtml', '测试2\r\n测试2\r\n测试2\r\n测试2', null, '55');
-INSERT INTO `t_mz_articlecontent` VALUES ('14', '14', '2', '15010396105', '123981233', '123981233@qq.com', '测试3', '测试3', '北京', '31.326131', '120.646209', '江苏省苏州市姑苏区莫邪路', '2015-01-12 23:05:13', '2015-01-16 22:05:13', '1', '0', '网络购票', 'http://www.tmall.com/1111.shtml', '抱歉，没有找到与“php获取本周时间 与datetime比较” 相关的新闻内容。', null, '56');
-INSERT INTO `t_mz_articlecontent` VALUES ('15', '14', '2', '15010396106', '123981233', '123981233@126.com', '测试4', '测试4', '武汉', '30.607694', '114.291191', '湖北省武汉市江岸区高雄路155号', '2015-01-12 00:00:28', '2015-01-16 23:55:28', '1', '0', '网络购票', 'http://www.tmall.com/测试4.shtml', '测试4测试4测试4测试4测试4', null, '57');
 
 -- ----------------------------
 -- Table structure for `t_mz_attachment`
@@ -115,7 +112,7 @@ CREATE TABLE `t_mz_attachment` (
   `filepath` varchar(100) DEFAULT NULL COMMENT '文件保存路径',
   `uploadtime` datetime DEFAULT NULL COMMENT '上传时间',
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 COMMENT='附件信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COMMENT='附件信息表';
 
 -- ----------------------------
 -- Records of t_mz_attachment
@@ -157,9 +154,6 @@ INSERT INTO `t_mz_attachment` VALUES ('51', '1', '14', null, 'Screenshot_2014-05
 INSERT INTO `t_mz_attachment` VALUES ('52', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab9e6c1808.png', '/Uploads/images/', null);
 INSERT INTO `t_mz_attachment` VALUES ('53', '1', '14', null, '1d2890da99fcd48692a3c46e9972e568.jpg', '54702fe7cbb26.jpg', '/Uploads/images/', null);
 INSERT INTO `t_mz_attachment` VALUES ('54', '1', '14', null, 'Penguins.jpg', '54b7551e2c2bd.jpg', '/Uploads/images/', null);
-INSERT INTO `t_mz_attachment` VALUES ('55', '1', '14', null, '25279801_1378348357337.jpg', '54b7c97419448.jpg', '/Uploads/images/', '0000-00-00 00:00:00');
-INSERT INTO `t_mz_attachment` VALUES ('56', '1', '14', null, '20130704173302766.png', '54b7c9a45ec71.png', '/Uploads/images/', '0000-00-00 00:00:00');
-INSERT INTO `t_mz_attachment` VALUES ('57', '1', '14', null, 'img9.jpg', '54b7cd7532c27.jpg', '/Uploads/images/', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for `t_mz_group`
