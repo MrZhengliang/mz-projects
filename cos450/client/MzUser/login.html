@@ -3,9 +3,53 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<script src="__JS__/mzuser/login.js"></script>
 	<load file="__CSS__/mzuser/login.css"/>
+</head>
+<body>
+	<div class="login_content">
+		<div class="left_img">
+			<img width="398" height="298" src="__IMAGE__/mz_banner.gif" alt="logo">
+		</div>
+		<div class="right_form">
+			<h2>登陆Cos405</h2>
+			<form name="logForm" id="logForm" action="" method="post">
+				<div class="item">
+					<label>账&nbsp;&nbsp;号</label><input id="login_name" class="basic-input2" type="text" name="username" value="邮箱或昵称"/>
+					 <span id="login_name_err" style="color:red;font-size: 12px;width: 120px;"></span>
+				</div>
+				<div class="item">
+					<label>密&nbsp;&nbsp;码</label><input id="password" class="basic-input" type="password" name="password"/>
+					 <span id="pwd_msg" style="color:red;font-size: 12px;width: 120px;"></span>
+				</div>
+				<div class="item">
+					<label>验证码</label><input class="basic-input" type="text" name="captcha" id="captcha"/>
+					<img id="code" src="__APP__/Public/code/" onclick="refreshCode();"/></br>
+				</div>
+				<div class="item_tw">
+					<label></label>
+					<p class="remember">
+						<!--input id="remember" type="checkbox" tabindex="4" name="remember">
+						<label class="remember" for="remember">下次自动登录</label-->
+						<a href="__APP__/MzUser/resetpassword">忘记密码了</a>
+					</p>
+					<p class="register">
+						<label class="register">&nbsp;&nbsp;&gt;&nbsp;还没有账号</label>
+						<a href="__APP__/MzUser/register">立即注册</a>
+					</p>
+				</div>
+				<div class="item_th">
+					<label></label>
+					<input class="btn-submit" id="button" type="button" tabindex="5" name="user_login" value="登录">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+
+
 	<script src="__JS__/jquery-1.9.1.min.js"></script>
+	<script src="__JS__/mzuser/login.js"></script>
 	<script type="text/javascript">
 		$(function(){
 
@@ -142,53 +186,49 @@
 			CodeIm.src="__APP__/Public/code/"+"?"+Math.random();
 		}
 
+		//提交form
+		var subLogForm = function(){
+			var flag = true;
+			var verifylogin_name = true;
+			var verifyPwd = true;
+			var verifyCode = true;
+			var om = $('#login_name');
+			var op = $('#password');
+			var oc = $('#captcha');
+			if(om.val() =='' || !verifylogin_name){
+					$('#login_name_err').text('请填写正确邮箱或昵称!');
+					$('#login_name').css({
+						  "border":"1px solid red"
+					 });
+					flag = false;
+				}
+				if(op.val() == '' || !verifyPwd){
+					$('#pwd_msg').text('请填写完整密码!');
+					$('#password').css({
+						  "border":"1px solid red"
+					 });
+					flag = false;
+				}
+				if(oc.val() == '' || !verifyCode){
+					$('#captcha').css({
+						  "border":"1px solid red"
+					 });
+					flag = false;
+				}
+
+				if(om.val() !='' && op.val() != ''&& oc.val() != '' && verifylogin_name && verifyPwd && verifyCode){
+					flag = true;
+				}
+				//校验通过
+				if(flag){
+					$("#logForm").attr("action","__URL__/doLogin").submit();
+				}
+		}
 
 		/*回车事件*/
 		$("input").keydown(function(e){
 			if(e.which == 13){
-				alert(123);
-				$("#logForm").attr("action","__URL__/doLogin").submit();
+				subLogForm();
 			}
 		});
 	</script>
-</head>
-<body>
-	<div class="login_content">
-		<div class="left_img">
-			<img width="398" height="298" src="__IMAGE__/mz_banner.gif" alt="logo">
-		</div>
-		<div class="right_form">
-			<h2>登陆Cos405</h2>
-			<form name="logForm" id="logForm" action="" method="post">
-				<div class="item">
-					<label>账&nbsp;&nbsp;号</label><input id="login_name" class="basic-input2" type="text" name="username" value="邮箱或昵称"/>
-					 <span id="login_name_err" style="color:red;font-size: 12px;width: 120px;"></span>
-				</div>
-				<div class="item">
-					<label>密&nbsp;&nbsp;码</label><input id="password" class="basic-input" type="password" name="password"/>
-					 <span id="pwd_msg" style="color:red;font-size: 12px;width: 120px;"></span>
-				</div>
-				<div class="item">
-					<label>验证码</label><input class="basic-input" type="text" name="captcha" id="captcha"/>
-					<img id="code" src="__APP__/Public/code/" onclick="refreshCode();"/></br>
-				</div>
-				<div class="item_tw">
-					<label></label>
-					<p class="remember">
-						<!--input id="remember" type="checkbox" tabindex="4" name="remember">
-						<label class="remember" for="remember">下次自动登录</label-->
-						<a href="__APP__/MzUser/resetpassword">忘记密码了</a>
-					</p>
-					<p class="register">
-						<label class="register">&nbsp;&nbsp;&gt;&nbsp;还没有账号</label>
-						<a href="__APP__/MzUser/register">立即注册</a>
-					</p>
-				</div>
-				<div class="item_th">
-					<label></label>
-					<input class="btn-submit" id="button" type="button" tabindex="5" name="user_login" value="登录">
-				</div>
-			</form>
-		</div>
-	</div>
-</body>

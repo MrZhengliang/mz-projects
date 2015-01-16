@@ -17,7 +17,7 @@ class MzInfoAction extends Action {
 	}
 
 	/**
-	 * 漫展信息
+	 * 漫展信息本周列表
 	 * */
     public function mzList(){
 		header("Content-Type:text/html; charset=utf-8");
@@ -61,8 +61,8 @@ class MzInfoAction extends Action {
 		//$arr = $Articlecontent->where($data)->select();
 		//->join('RIGHT JOIN t_mz_attachment ON t_mz_attachment.aid = user_profile.typeid' );
 		$sql = 'select article.cid,article.title,article.starttime,article.closetime,article.address,article.cityname,article.faceimg,attach.filename,attach.newfilename ' .
-				'from t_mz_articlecontent as article, t_mz_attachment as attach where 1=1 ' .
-				' and article.faceimg=attach.aid ' .
+				'from t_mz_articlecontent as article LEFT JOIN t_mz_attachment as attach ON article.faceimg = attach.aid where 1=1 ' .
+				' and article.status = 1'.
 				' and date_format(article.starttime, "%Y%m%d") >= date_format("'.$now_start.'","%Y%m%d")' .
 						' and date_format(article.closetime, "%Y%m%d") <= date_format("'.$now_end.'","%Y%m%d")';
 		$voList = $Articlecontent->query($sql);
@@ -75,6 +75,64 @@ class MzInfoAction extends Action {
 		$this->display();
     }
 
+
+
+	/**
+	 * 漫展信息未审核通过列表
+	 * */
+    public function unCompleteMzList(){
+		header("Content-Type:text/html; charset=utf-8");
+    	//展示所有漫展
+		$Articlecontent = M('Articlecontent');
+
+		//$data['starttime']=time();
+
+
+		$date=date('Y-m-d');  //当前日期
+		$first=1; //$first =1 表示每周星期一为开始日期 0表示每周日为开始日期
+		$w=date('w',strtotime($date));  //获取当前周的第几天 周日是 0 周一到周六是 1 - 6
+		$now_start=date('Y-m-d',strtotime("$date -".($w ? $w - $first : 6).' days')); //获取本周开始日期，如果$w是0，则表示周日，减去 6 天
+		$now_end=date('Y-m-d',strtotime("$now_start +6 days"));  //本周结束日期
+		$last_start=date('Y-m-d',strtotime("$now_start - 7 days"));  //上周开始日期
+		$last_end=date('Y-m-d',strtotime("$now_start - 1 days"));  //上周结束日期
+
+		//echo '本周开始日期：',$now_start,'<br />';
+		//echo '本周结束日期：',$now_end,'<br />';
+		//echo '上周开始日期：',$last_start,'<br />';
+		//echo '上周结束日期：',$last_end,'<br />';
+
+		//$date['cid']='6';
+		//$arr = $Articlecontent->where($data)->find();
+
+		//var_dump($data);
+
+		//var_dump(date('y-m-d'));
+		//var_dump($this->getWeekRange(date('y-m-d')));
+
+		//$dateDest = $this->getWeekRange(date('y-m-d'));//获取当前周的时间
+
+		//var_dump($dateDest);
+		//var_dump($dateDest['sdate']);
+		//var_dump($dateDest['edate']);
+
+
+		//$data['starttime']=array('EGT',$dateDest['sdate']);//开始时间大于一周内的初始时间
+		//$data['closetime']=array('ELT',$dateDest['edate']);//开始时间大于一周内的初始时间
+
+		//$arr = $Articlecontent->where($data)->select();
+		//->join('RIGHT JOIN t_mz_attachment ON t_mz_attachment.aid = user_profile.typeid' );
+		$sql = 'select article.cid,article.title,article.starttime,article.closetime,article.address,article.cityname,article.faceimg,attach.filename,attach.newfilename ' .
+				'from t_mz_articlecontent as article LEFT JOIN t_mz_attachment as attach ON article.faceimg = attach.aid where 1=1 ' .
+				' and article.status in (0,2)';
+		$voList = $Articlecontent->query($sql);
+		//var_dump($voList);
+
+		$this->assign('data',$voList);
+		//$this->assign('arr',$arr);
+
+
+		$this->display();
+    }
     /**
 	 * 根据漫展id查询漫展信息详情
 	 */
