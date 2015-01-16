@@ -32,7 +32,7 @@ import com.sh.manage.demo.weixin.util.MessageUtil;
 import com.sh.manage.demo.weixin.util.SignUtil;
 
 /**
- * @author fuzl
+ * @author 
  *
  */
 

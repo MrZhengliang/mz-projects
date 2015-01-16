@@ -13,7 +13,7 @@ package com.sh.manage.exception;
  * <p>
  * <p>
  * 
- * @author fuzl
+ * @author 
  * @version 1.0
  */
 public class SPlatformServiceException extends SPlatformException {

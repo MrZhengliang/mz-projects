@@ -2,7 +2,7 @@ package com.sh.manage.demo.weixin.msg.req;
 
 /**
  * 事件基础类
- * @author fuzl
+ * @author 
  *
  */
 public class BaseEvent extends BaseReq {

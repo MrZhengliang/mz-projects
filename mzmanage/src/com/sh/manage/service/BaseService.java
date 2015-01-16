@@ -11,7 +11,7 @@ import com.sh.manage.exception.SPlatformServiceException;
 
 /**
  * 其他service都继承此service，节俭了配置@Transactional
- * @author fuzl
+ * @author 
  *
  */
 @Service("baseService")

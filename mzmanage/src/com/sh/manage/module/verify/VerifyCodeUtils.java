@@ -20,7 +20,7 @@ import java.util.Random;
 import javax.imageio.ImageIO;
 /**
  * 验证码带颜色工具类
- * @author fuzl
+ * @author 
  *
  */
 public class VerifyCodeUtils {

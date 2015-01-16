@@ -8,7 +8,7 @@ package com.sh.manage.exception;
 /**
  * 
  * 平台异常抽象基类
- * @author fuzl
+ * @author 
  *
  */
 public abstract class SCException extends Exception {

@@ -15,7 +15,7 @@ import java.text.MessageFormat;
  * <p>
  * <p>
  * 
- * @author fuzl
+ * @author 
  * @version 1.0
  */
 public class SPlatformRuntimeException extends RuntimeException {

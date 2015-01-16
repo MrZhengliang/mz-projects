@@ -16,7 +16,7 @@ package com.sh.manage.utils;
  * <p>
  * <p>
  * 
- * @author fuzl
+ * @author 
  * @version 1.0
  */
 public class ResponseUtils {

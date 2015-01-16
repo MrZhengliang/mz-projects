@@ -24,7 +24,7 @@ import com.sh.manage.pojo.LoginUser;
  * 安全验证 过滤器
  * 登陆校验filter
  * 
- * @author fuzl
+ * @author 
  * 
  */
 public class LoginFilter implements Filter {

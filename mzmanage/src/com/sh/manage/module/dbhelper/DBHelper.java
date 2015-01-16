@@ -19,7 +19,7 @@ import javax.servlet.jsp.jstl.sql.ResultSupport;
 
 /**
  * 数据库访问通用类
- * @author fuzl
+ * @author 
  * 
  */
 public class DBHelper {

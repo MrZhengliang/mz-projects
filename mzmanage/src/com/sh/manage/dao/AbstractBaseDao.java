@@ -454,7 +454,7 @@ public abstract class AbstractBaseDao<T> {
 	 *            sql语句中需要传递的参数
 	 * @return
 	 * @throws
-	 * @history add by fuzl
+	 * @history add by 
 	 */
 	@SuppressWarnings("unchecked")
 	public Page queryModelListByPage(final String sqlStr, final Object[] paras,
@@ -595,7 +595,7 @@ public abstract class AbstractBaseDao<T> {
 	 *            sql语句中需要传递的参数
 	 * @return
 	 * @throws DataAccessException
-	 * @history add by fuzl
+	 * @history add by 
 	 */
 	@SuppressWarnings("rawtypes")
 	protected List<?> queryModelSqlList(final String sqlStr,

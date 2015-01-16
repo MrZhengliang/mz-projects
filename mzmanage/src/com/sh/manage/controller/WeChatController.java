@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 微信示例
- * @author fuzl
+ * @author 
  *
  */
 

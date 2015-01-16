@@ -13,7 +13,7 @@ import org.apache.commons.lang.StringUtils;
  * 
  * 特别将其中的帐号字符串验证、 字符串长度验证、服务端来源页面地址校验、客户段登录IP地址校验。<br/>
  * 
- * @author fuzl
+ * @author 
  * 
  */
 public class SafeUtil {

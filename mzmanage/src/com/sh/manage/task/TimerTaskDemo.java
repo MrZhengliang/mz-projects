@@ -11,7 +11,7 @@ import javax.servlet.ServletContext;
 /**
  * java定时器示例
  * 
- * @author fuzl
+ * @author 
  * 
  */
 public class TimerTaskDemo extends TimerTask{

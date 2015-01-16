@@ -21,7 +21,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 /**
  * 操作实体表
- * @author fuzl
+ * @author 
  *
  */
 @Entity

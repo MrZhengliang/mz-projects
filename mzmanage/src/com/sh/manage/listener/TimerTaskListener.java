@@ -13,7 +13,7 @@ import com.sh.manage.task.TimerTaskDemo;
 /**
  * 
  * servlet监听器，监听定时任务
- * @author fuzl
+ * @author 
  *
  */
 public class TimerTaskListener implements ServletContextListener {

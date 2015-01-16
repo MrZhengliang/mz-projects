@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.sh.manage.module.verify.VerifyCodeUtils;
 
 /**
- * @author fuzl
+ * @author 
  * 
  */
 public class AuthImageServlet extends HttpServlet {

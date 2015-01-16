@@ -16,7 +16,7 @@ import java.text.MessageFormat;
  * Company: 
  * <p>
  * 
- * @author fuzl
+ * @author 
  * @version 1.0
  */
 public class SPlatformException extends Exception {
