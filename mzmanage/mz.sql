@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : spaltform
-Source Server Version : 50520
+Source Server         : 本地
+Source Server Version : 50508
 Source Host           : localhost:3306
 Source Database       : mz
 
 Target Server Type    : MYSQL
-Target Server Version : 50520
+Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2015-01-15 17:06:58
+Date: 2015-01-18 23:16:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -91,12 +91,14 @@ CREATE TABLE `t_mz_articlecontent` (
   `content` text COMMENT '漫展简介',
   `dateline` datetime DEFAULT NULL COMMENT '添加时间',
   `faceimg` mediumint(8) DEFAULT NULL COMMENT '漫展封面图片,对应t_mz_attachment表的aid',
+  `status` tinyint(1) DEFAULT NULL COMMENT '漫展状态，0 待审核；1 已审核,上线； 9 下线。',
   PRIMARY KEY (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='门户文章漫展内容表';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='门户文章漫展内容表';
 
 -- ----------------------------
 -- Records of t_mz_articlecontent
 -- ----------------------------
+INSERT INTO `t_mz_articlecontent` VALUES ('13', '14', '2', '15010396104', '981233589', '981233589@qq.com', '测试1', '测试1', '北京', '39.910028', '116.416125', '北京市北京市东城区东交民巷', '2015-01-12 08:00:00', '2015-01-18 23:55:00', '2', '15', '网络购票', 'http://www.tmall.com/测试1.shtml', '测试1\r\n测试1\r\n测试1\r\n测试1', null, '55', '1');
 
 -- ----------------------------
 -- Table structure for `t_mz_attachment`
@@ -112,7 +114,7 @@ CREATE TABLE `t_mz_attachment` (
   `filepath` varchar(100) DEFAULT NULL COMMENT '文件保存路径',
   `uploadtime` datetime DEFAULT NULL COMMENT '上传时间',
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COMMENT='附件信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8 COMMENT='附件信息表';
 
 -- ----------------------------
 -- Records of t_mz_attachment
@@ -154,6 +156,7 @@ INSERT INTO `t_mz_attachment` VALUES ('51', '1', '14', null, 'Screenshot_2014-05
 INSERT INTO `t_mz_attachment` VALUES ('52', '1', '14', null, 'Screenshot_2014-05-06-12-18-09.png', '542ab9e6c1808.png', '/Uploads/images/', null);
 INSERT INTO `t_mz_attachment` VALUES ('53', '1', '14', null, '1d2890da99fcd48692a3c46e9972e568.jpg', '54702fe7cbb26.jpg', '/Uploads/images/', null);
 INSERT INTO `t_mz_attachment` VALUES ('54', '1', '14', null, 'Penguins.jpg', '54b7551e2c2bd.jpg', '/Uploads/images/', null);
+INSERT INTO `t_mz_attachment` VALUES ('55', '1', '14', null, 'cem0MNTWB1s66.jpg', '54ba7b610af99.jpg', '/Uploads/images/', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for `t_mz_group`

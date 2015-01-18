@@ -68,7 +68,9 @@ public class TMzArticleContent  implements java.io.Serializable {
       * 漫展封面图片,对应t_mz_attachment表的aid
       */
      private Integer faceimg;
-
+     
+     //漫展状态，0 待审核；1 已审核,上线； 9 下线。
+     private Integer status;
 
     // Constructors
 
@@ -317,13 +319,15 @@ public class TMzArticleContent  implements java.io.Serializable {
     public void setFaceimg(Integer faceimg) {
         this.faceimg = faceimg;
     }
-   
 
 
+    @Column(name="status")
+	public Integer getStatus() {
+		return status;
+	}
 
 
-
-
-
-
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 }

@@ -6,25 +6,18 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>控制台-Bootstrap后台管理系统</title>
+<title>控制台-漫展信息管理</title>
 <meta name="keywords" content="Bootstrap模版" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- 引入js -->
 <jsp:include page="../static/js/js_inc.jsp"></jsp:include>
 
-
 <!-- basic styles -->
 <link href="<%=path %>/static/assets/css/bootstrap.min.css"
 	rel="stylesheet" />
 <link rel="stylesheet"
 	href="<%=path %>/static/assets/css/font-awesome.min.css" />
-
-<!--[if IE 7]>
-		  <link rel="stylesheet" href="<%=path %>/static/assets/css/font-awesome-ie7.min.css" />
-		<![endif]-->
-
-<!-- page specific plugin styles -->
 
 <!-- fonts -->
 
@@ -38,10 +31,11 @@
 	href="<%=path %>/static/assets/css/ace-rtl.min.css" />
 <link rel="stylesheet"
 	href="<%=path %>/static/assets/css/ace-skins.min.css" />
-<link rel="stylesheet"
-	href="<%=path %>/static/assets/css/datepicker.css" />
 
 <link rel="stylesheet" href="<%=path %>/static/css/bootstrap-select.css">
+
+<link rel="stylesheet" href="<%=path %>/static/css/datepicker.css">
+
 <style type="text/css">
 .span2 {
 	width: 120px;
@@ -85,15 +79,7 @@
 }
 </style>
 <!-- ace settings handler -->
-
 <script src="<%=path %>/static/assets/js/ace-extra.min.js"></script>
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
-<!--[if lt IE 9]>
-		<script src="<%=path %>/static/assets/js/html5shiv.js"></script>
-		<script src="<%=path %>/static/assets/js/respond.min.js"></script>
-		<![endif]-->
 </head>
 
 <body>
@@ -353,9 +339,9 @@
 						</script>
 
 					<ul class="breadcrumb">
-						<li><i class="icon-home home-icon"></i> <a href="#">系统管理</a>
+						<li><i class="icon-home home-icon"></i> <a href="#">信息管理</a>
 						</li>
-						<li class="active">会员管理</li>
+						<li class="active">漫展管理</li>
 					</ul>
 					<!-- .breadcrumb -->
 
@@ -368,7 +354,7 @@
 							action="<spring:url value='/aumanage.do' htmlEscape='true'/>"
 							method="post" target="_self">
 							<i class="icon-hand-right"></i><span>搜索</span> 
-							<input name="username" value="${username }" type="text"
+							<input name="usercode" value="${usercode }" type="text"
 								placeholder="输入用户名" class="ui-autocomplete-input" id="search" autocomplete="off" />
 							<input id="startDate" class="span2"
 								type="text" name="startDate" value="${startDate }"
@@ -377,25 +363,11 @@
 								placeholder="结束日期" readonly> 
 							<select id="auRoleId" name="auRoleId"
 								style="height: 33px; width: 120px; background: none repeat scroll 0 0 #f5f5f5 !important;"
-								class="chosen-select" id="form-field-select-3" data-placeholder="选择等级">
-								<option value="0">请选择等级</option>
-								<c:forEach items="${roleList}" var="role">
-									<option value="${role.id }"
-										onclick="setAuRoleId('${role.id }');" 
-										<c:if test="${role.id == auRoleId}">selected</c:if>	
-									>${role.roleName}
-									</option>
-								</c:forEach>
+								class="chosen-select" id="form-field-select-3" data-placeholder="选择票价方式">
+								<option value="1">免费</option>
+								<option value="2">收费 </option>
 							</select> 
-							<select id="status"
-								style="height: 33px; width: 80px; background: none repeat scroll 0 0 #f5f5f5 !important;"
-								class="chosen-select" id="form-field-select-3" name="status"
-								data-placeholder="">
-								<option value="0" selected>状态</option>
-								<option value="1" onclick="setAuStatus('1');" <c:if test="${status == 1}">selected</c:if>>有效</option>
-								<option value="9" onclick="setAuStatus('9');" <c:if test="${status == 9}">selected</c:if>>失效</option>
-							</select> 
-							<a class="btn btn-xs btn-light" style="height: 28px;"
+							 <a class="btn btn-xs btn-light" style="height: 28px;"
 								onClick="submitSearchForm()"><i class="icon-search"
 								style="color: #6fb3e0 !important;"></i></a>
 						</form>
@@ -413,27 +385,41 @@
 											<thead>
 												<tr>
 													<th class="center">序号</th>
-													<th>用户名</th>
-													<th>姓名</th>
-													<th>级别</th>
-													<th>添加时间</th>
-													<th>有效期</th>
-													<th>上次访问IP</th>
+													<th>漫展标题
+													</th>
+													<th>举办地</th>
+													<th>联系电话</th>
+													<th>QQ</th>
+													<th>邮箱</th>
+													
+													<th>开始时间</th>
+													<th>结束时间</th>
+													<th>漫展来源</th>
 													<th>操作</th>
 												</tr>
 											</thead>
 
 											<tbody>
-												<c:forEach items="${appUserList}" var="appUser"
+												<c:forEach items="${articleContentList}" var="article"
 													varStatus="status">
 													<tr>
-														<td>${appUser.auid}</td>
-														<td>${appUser['userName']}</td>
-														<td>${appUser.name}</td>
-														<td>${appUser.roleName}</td>
-														<td>${appUser.startDate}</td>
-														<td>${appUser.endDate}</td>
-														<td>${appUser.lastLoginIP}</td>
+														<td>${article.cid}</td>
+														<td>
+															<a href="<%=path%>/mzinfo.do?cid=${article.cid}" target="_self">
+																${article.title}
+															</a>
+														</td>
+														<td>${article.cityname}</td>
+														<td>${article.telephone}</td>
+														<td>${article.qqcode}</td>
+														<td>${article.email}</td>
+														
+														<td>${article.starttime}</td>
+														<td>${article.closetime}</td>
+														<td>
+															<c:if test="${article.idtype == 1}">系统人员</c:if>
+															<c:if test="${article.idtype == 2}">网站会员</c:if>
+														</td>
 														<td>
 															<a data-toggle="modal" href="#auserEdit" 
 																onClick="editAuser('${appUser.roleId}','${appUser.startDate}','${appUser.userName}','${appUser.endDate}','${appUser.terminalId}','${appUser.email}','${appUser.name}','${appUser.limitYear}','${appUser.remark}','${appUser.status}','${appUser.auid}');" class="btn btn-xs btn-primary"><i class="icon-edit"></i></a>
@@ -445,7 +431,7 @@
 												<c:if test="${page.totalRowNum>0}">
 													<c:if test="${page.totalRowNum >= pageSize}">
 														<tr class="page_c">
-															<td colspan="8">${page.display}</td>
+															<td colspan="10">${page.display}</td>
 														</tr>
 													</c:if>
 												</c:if>
@@ -461,7 +447,9 @@
 								style="display: inline-block; background-repeat: no-repeat; border-width: 4px; font-size: 13px; line-height: 1.39; padding: 4px 9px; background-color: #307ECC;">
 								<a href="#modal-table" role="button"
 									style="text-decoration: none; color: #fff; font-family: 'Open Sans';"
-									data-toggle="modal">添加</a>
+									data-toggle="modal">
+									<i class="icon-plus"></i>
+									添加</a>
 							</div>
 							<div class="hr hr-18 dotted hr-double"></div>
 						</div>
@@ -483,20 +471,10 @@
 	</div>
 	<!-- /.main-container -->
 
-	<!-- basic scripts -->
-	<!--[if !IE]> -->
 
 	<script type="text/javascript">
 			window.jQuery || document.write("<script src='<%=path %>/static/assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
 		</script>
-
-	<!-- <![endif]-->
-
-	<!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='<%=path %>/static/assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
-</script>
-<![endif]-->
 
 	<script type="text/javascript">
 			if("ontouchend" in document) document.write("<script src='<%=path %>/static/assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
@@ -505,10 +483,6 @@
 	<script src="<%=path %>/static/assets/js/typeahead-bs2.min.js"></script>
 
 	<!-- page specific plugin scripts -->
-
-	<!--[if lte IE 8]>
-		  <script src="<%=path %>/static/assets/js/excanvas.min.js"></script>
-		<![endif]-->
 
 	<script
 		src="<%=path %>/static/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -525,14 +499,13 @@
 
 	<script src="<%=path %>/static/assets/js/ace-elements.min.js"></script>
 	<script src="<%=path %>/static/assets/js/ace.min.js"></script>
-	<script type="text/javascript"	src="<%=path %>/static/assets/js/date-time/bootstrap-datepicker.js"></script>
-
-<script type="text/javascript"	src="<%=path %>/static/js/bootstrap-select.js"></script>
 
 
-	
+<script type="text/javascript"	src="<%=path %>/static/js/date/bootstrap-datetimepicker.js"></script>
 
-	<script type="text/javascript">
+<script type="text/javascript"	src="<%=path %>/static/js/zdialog/zDialog.js"></script>
+<script type="text/javascript"	src="<%=path %>/static/js/zdialog/zDrag.js"></script>
+<script type="text/javascript">
 			jQuery(function($) {
 				$('#id-disable-check').on('click', function() {
 					var inp = $('#form-input-readonly').get(0);
@@ -746,7 +719,7 @@
 							aria-hidden="true">
 							<span class="white">&times;</span>
 						</button>
-						<i class="icon-save"></i>&nbsp;会员添加
+						<i class="icon-save"></i>&nbsp;漫展添加
 					</div>
 				</div>
 
@@ -756,58 +729,42 @@
 						method="post" target="targetFrame">
 						<ul class="box_l_h_c">
 							<li class="box_l_h_c_li">
-								<select id="auRoleId" name="auRoleId"
-									style="height:28px;width: 192px; background: none repeat scroll 0 0 #f5f5f5 !important;">
-										<option value="0" selected>请选择等级</option>
-										<c:forEach items="${roleList}" var="role">
-											<option value="${role.id }"
-												onclick="setAuRoleId('${role.id }');">${role.roleName}</option>
-										</c:forEach>
-								</select>
+								<input id="telephone" class="span3" type="text"
+									name="telephone" value="" placeholder="联系电话">
 							</li>
-							<li class="box_l_h_c_li">
-								<input id="createDate" class="span3" type="text"
-									name="startDate" value="" placeholder="开始日期" readonly>
-							</li>
-							<li class="box_l_h_c_li"><input name="username" value="" type="text"
-									placeholder="输入用户名" class="ui-autocomplete-input" id=""
+							<li class="box_l_h_c_li"><input name="email" value="" type="text"
+									placeholder="邮箱" class="ui-autocomplete-input" id="email"
 									autocomplete="off" /></li>
 							<li class="box_l_h_c_li">
-								<input id="validDate" class="span3" type="text"
-									name="endDate" value="" placeholder="结束日期" readonly>
+								<input id="qqcode" class="span3" type="text"
+									name="qqcode" value="" placeholder="QQ" >
 							</li>
 							
 							<li class="box_l_h_c_li">
-								<input name="password" id="password" value="" type="password"
-									placeholder="输入密码" class="ui-autocomplete-input" 
-									autocomplete="off" />
+								<input name="title" id="title" value="" type="text"
+									placeholder="漫展名称" class="ui-autocomplete-input" />
 							</li>
 							
 							<li class="box_l_h_c_li">
-								<input name="terminalId" id="terminalId" type="text"
-									placeholder="输入手机号" class="ui-autocomplete-input" 
-									autocomplete="off" />
+								<input name="privurl" id="privurl" type="text"
+									placeholder="个性域名" class="ui-autocomplete-input" />
 							</li>
 							
 							<li class="box_l_h_c_li">
-								<input name="repassword" id="repassword" value="" type="password"
-									placeholder="确认密码" class="ui-autocomplete-input" 
-									autocomplete="off" />
+								<input name="startDate" id="startDate" type="text"
+									placeholder="开始时间" class="ui-autocomplete-input" />
 							</li>
 							<li class="box_l_h_c_li">
-								<input name="email" id="email" type="text"
-									placeholder="输入邮箱" class="ui-autocomplete-input" 
-									autocomplete="off" />
+								<input name="endDate" id="endDate" type="text"
+									placeholder="结束时间" class="ui-autocomplete-input" />
 							</li>
 							<li class="box_l_h_c_li">
 								<input name="name" value="" type="text"
-									placeholder="输入姓名" class="ui-autocomplete-input" id="name"
-									autocomplete="off" />
+									placeholder="输入姓名" class="ui-autocomplete-input" id="name"/>
 							</li>
 							<li class="box_l_h_c_li">
 								<input name="limitYear" value="" type="text" id="limitYear"
-									placeholder="开通年限(限数字,0-100)" class="ui-autocomplete-input"
-									autocomplete="off" />
+									placeholder="开通年限(限数字,0-100)" class="ui-autocomplete-input"/>
 							</li>
 							<li class="box_l_h_c_li">
 								<input name="remark" value="" type="text"
@@ -985,12 +942,7 @@
 </div>
 	<iframe name="targetFrame" style="width: 0%; display: none;"></iframe>
 <script type="text/javascript">
-				$('#startDate').datepicker({format:"yyyy-mm-dd"});
-				$('#endDate').datepicker({format:"yyyy-mm-dd"});
-				$('#createDate').datepicker({format:"yyyy-mm-dd"});
-				$('#validDate').datepicker({format:"yyyy-mm-dd"});
-				$('#createDateEdit').datepicker({format:"yyyy-mm-dd"});
-				$('#validDateEdit').datepicker({format:"yyyy-mm-dd"});
+				
 				//提交搜索
 				var setAuRoleId = function(auRoleId){
 					document.getElementById("auRoleId").value=auRoleId;
@@ -1153,6 +1105,24 @@ var delAuser = function(auid,username){
 
        })
 </script>
+<script>
+	$('#startDate').datetimepicker({format:'yyyy-mm-dd hh:ii:ss',language: 'ch',autoclose:'true'});
+  	$('#endDate').datetimepicker({format:'yyyy-mm-dd hh:ii:ss',language: 'ch',autoclose:'true'});
+
+ 	
+  	function open20()
+  	{
+  		var diag = new Dialog();
+  		diag.Width = 600;
+  		diag.Height = 300;
+  		diag.Title = "新建站点";
+  		diag.URL = "bigform.html";
+  		diag.OKEvent = function(){Dialog.alert("点击确定可以提交表单");diag.close();};
+  		diag.MessageTitle = "大表单";
+  		diag.Message = '如果表单比较大需要用户拖动滚动条，建议表单分步填写';
+  		diag.show();
+  	}
+ </script>
 </body>
 </html>
 

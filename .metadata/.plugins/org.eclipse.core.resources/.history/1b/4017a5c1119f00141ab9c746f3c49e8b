@@ -514,6 +514,7 @@
 
 <script src="__JS__/bootstrap.min.js" type="text/javascript"></script>
 <script src="__JS__/date/bootstrap-datetimepicker.js" type="text/javascript"></script>
+<script src="__JS__/date/bootstrap-datetimepicker.zhCN.js" charset="UTF-8" type="text/javascript"></script>
 
 <script>
 	$('#startDate').datetimepicker({format:'yyyy-mm-dd hh:ii:ss',language: 'ch',autoclose:'true'});

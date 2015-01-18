@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="22" version="2.0">
 <workbenchAdvisor/>
 <window height="738" maximized="true" width="1024" x="104" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -19,6 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="net.sourceforge.phpeclipse.PHPUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -32,20 +33,28 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="mzinfo.css" partName="mzinfo.css" path="I:/gitHub-projects/mz-projects/cos450/client/Public/css/mzuser/mzinfo.css" title="mzinfo.css" tooltip="cos450/client/Public/css/mzuser/mzinfo.css" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.wst.css.core.csssource.source" name="mzinfo.css" partName="mzinfo.css" path="I:/gitHub-projects/mz-projects/cos450/client/Public/css/mzuser/mzinfo.css" title="mzinfo.css" tooltip="cos450/client/Public/css/mzuser/mzinfo.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/client/Public/css/mzuser/mzinfo.css"/>
 </editor>
-<editor focus="true" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="mzList.html" partName="mzList.html" path="I:/gitHub-projects/mz-projects/cos450/client/MzInfo/mzList.html" title="mzList.html" tooltip="cos450/client/MzInfo/mzList.html" workbook="DefaultEditorWorkbook">
+<editor id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="mzList.html" partName="mzList.html" path="I:/gitHub-projects/mz-projects/cos450/client/MzInfo/mzList.html" title="mzList.html" tooltip="cos450/client/MzInfo/mzList.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/client/MzInfo/mzList.html"/>
+</editor>
+<editor id="net.sourceforge.phpeclipse.PHPUnitEditor" name="MzInfoAction.class.php" partName="MzInfoAction.class.php" path="I:/gitHub-projects/mz-projects/cos450/App/Lib/Action/MzInfoAction.class.php" title="MzInfoAction.class.php" tooltip="cos450/App/Lib/Action/MzInfoAction.class.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/App/Lib/Action/MzInfoAction.class.php"/>
+</editor>
+<editor id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="addMz.html" partName="addMz.html" path="I:/gitHub-projects/mz-projects/cos450/client/MzInfo/addMz.html" title="addMz.html" tooltip="cos450/client/MzInfo/addMz.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/client/MzInfo/addMz.html"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
-<viewState columnWidth0="46" columnWidth1="22" columnWidth2="256" columnWidth3="81" columnWidth4="156" columnWidth5="66" columnWidth6="0" horizontalPosition="0" verticalPosition="0">
+<viewState columnWidth0="49" columnWidth1="25" columnWidth2="259" columnWidth3="84" columnWidth4="159" columnWidth5="69" columnWidth6="0" horizontalPosition="0" verticalPosition="0">
 <columnOrder columnOrderIndex="0"/>
 <columnOrder columnOrderIndex="1"/>
 <columnOrder columnOrderIndex="2"/>
@@ -65,8 +74,18 @@
 <expanded>
 <element path="/cos450"/>
 <element path="/cos450/App"/>
-<element path="/cos450/ThinkPHP"/>
+<element path="/cos450/App/Lib"/>
+<element path="/cos450/App/Lib/Action"/>
+<element path="/cos450/client"/>
+<element path="/cos450/client/MzInfo"/>
+<element path="/cos450/client/Public"/>
+<element path="/cos450/client/Public/css"/>
+<element path="/cos450/client/Public/js"/>
+<element path="/cos450/client/Public/js/date"/>
 </expanded>
+<selection>
+<element path="/cos450/client/Public/css/datepicker.css"/>
+</selection>
 </viewState>
 </view>
 </views>
@@ -159,11 +178,29 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/cos450/client/Public/css/mzuser/mzinfo.css"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" path="/cos450/client/MzInfo/mzList.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/cos450/client/Public/css/mzuser/mzinfo.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/App/Lib/Action/MzInfoAction.class.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" path="/cos450/client/MzInfo/addMz.html"/>
 </editors>
 <item historyLabel="mzinfo.css" index="0">
 <position info="not_deleted" x="4461" y="0"/>
 </item>
-<item active="true" historyLabel="mzList.html" index="1"/>
+<item historyLabel="mzList.html" index="1"/>
+<item historyLabel="mzinfo.css" index="2">
+<position/>
+</item>
+<item historyLabel="mzList.html" index="1"/>
+<item historyLabel="MzInfoAction.class.php" index="3">
+<position info="not_deleted" x="2436" y="0"/>
+</item>
+<item historyLabel="MzInfoAction.class.php" index="3">
+<position info="not_deleted" x="2188" y="6"/>
+</item>
+<item historyLabel="mzList.html" index="1"/>
+<item historyLabel="addMz.html" index="4"/>
+<item active="true" historyLabel="mzinfo.css" index="2">
+<position info="not_deleted" x="4483" y="0"/>
+</item>
 </navigationHistory>
 <stickyState/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -182,6 +219,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="addMz.html" tooltip="cos450/client/MzInfo/addMz.html">
+<persistable path="/cos450/client/MzInfo/addMz.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" name="MzInfoAction.class.php" tooltip="cos450/App/Lib/Action/MzInfoAction.class.php">
+<persistable path="/cos450/App/Lib/Action/MzInfoAction.class.php"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="mzList.html" tooltip="cos450/client/MzInfo/mzList.html">
 <persistable path="/cos450/client/MzInfo/mzList.html"/>
 </file>

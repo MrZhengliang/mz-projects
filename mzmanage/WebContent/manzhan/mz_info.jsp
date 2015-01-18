@@ -20,11 +20,6 @@
 <link rel="stylesheet"
 	href="<%=path %>/static/assets/css/font-awesome.min.css" />
 
-<!--[if IE 7]>
-		  <link rel="stylesheet" href="<%=path %>/static/assets/css/font-awesome-ie7.min.css" />
-		<![endif]-->
-
-<!-- page specific plugin styles -->
 
 <!-- fonts -->
 
@@ -88,12 +83,7 @@
 
 <script src="<%=path %>/static/assets/js/ace-extra.min.js"></script>
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
-<!--[if lt IE 9]>
-		<script src="<%=path %>/static/assets/js/html5shiv.js"></script>
-		<script src="<%=path %>/static/assets/js/respond.min.js"></script>
-		<![endif]-->
 </head>
 
 <body>
@@ -367,14 +357,19 @@
 									<span class="editable" id="username">${article.title}</span>
 								</div>
 							</div>
-
+							<div class="profile-info-row">
+								<div class="profile-info-name"> 个性域名</div>
+								<div class="profile-info-value">
+									<span class="editable" id="privurl">${article.privurl}</span>
+								</div>
+							</div>
 							<div class="profile-info-row">
 								<div class="profile-info-name"> 举办地 </div>
 
 								<div class="profile-info-value">
 									<i class="icon-map-marker light-orange bigger-110"></i>
 									<span class="editable" id="country">${article.cityname}</span>
-									<span class="editable" id="city">${article.cityname}</span>
+									<span class="editable" id="city">${article.address}</span>
 								</div>
 							</div>
 
@@ -393,22 +388,44 @@
 									<span class="editable" id="signup">${article.closetime}</span>
 								</div>
 							</div>
-
 							<div class="profile-info-row">
-								<div class="profile-info-name"> Last Online </div>
+								<div class="profile-info-name"> 审核状态</div>
 
 								<div class="profile-info-value">
-									<span class="editable" id="login">3 hours ago</span>
+									<span class="editable" id="signup">${article.closetime}</span>
+								</div>
+							</div>
+							<div class="profile-info-row">
+								<div class="profile-info-name"> 订票方式 </div>
+
+								<div class="profile-info-value">
+									<span class="editable" id="login">${article.pricetype}</span>
+								</div>
+							</div>
+							
+							<div class="profile-info-row">
+								<div class="profile-info-name"> 票价 </div>
+
+								<div class="profile-info-value">
+									<span class="editable" id="login">${article.price}</span>
 								</div>
 							</div>
 
 							<div class="profile-info-row">
-								<div class="profile-info-name"> About Me </div>
+								<div class="profile-info-name"> 网络售票地址 </div>
 
 								<div class="profile-info-value">
-									<span class="editable" id="about">Editable as WYSIWYG</span>
+									<span class="editable" id="about">${article.netticketaddress}</span>
 								</div>
 							</div>
+							<div class="profile-info-row">
+								<div class="profile-info-name"> 漫展简介 </div>
+
+								<div class="profile-info-value">
+									<span class="editable" id="about">${article.content}</span>
+								</div>
+							</div>
+							
 						</div>
 						<a href="<%=path %>/mzmanage.do" 
 								 class="btn btn-xs btn-primary" target="_self" style="margin:15px 0 0 10px;">

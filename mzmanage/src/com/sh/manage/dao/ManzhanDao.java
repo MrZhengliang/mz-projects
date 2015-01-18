@@ -37,7 +37,7 @@ public class ManzhanDao extends AbstractBaseDao<TMzArticleContent> {
 	public Page getAllTMzArticleContent(String cityName, String startDate,
 			String endDate,Integer priceType, Integer pageNo, int pageSize) {
 		StringBuffer sbf = new StringBuffer();
-		sbf.append("select rt.* from (select m.cid,m.uid,m.idtype,m.telephone,m.qqcode,m.email,m.title,m.privurl,m.cityname,m.lat,m.lng,m.address,m.starttime,m.closetime,m.pricetype,m.price,m.tickettype,m.netticketaddress,m.content,m.dateline,m.faceimg from t_mz_articlecontent m");
+		sbf.append("select rt.* from (select m.cid,m.uid,m.idtype,m.telephone,m.qqcode,m.email,m.title,m.privurl,m.cityname,m.lat,m.lng,m.address,m.starttime,m.closetime,m.pricetype,m.price,m.tickettype,m.netticketaddress,m.content,m.dateline,m.faceimg,m.status from t_mz_articlecontent m");
 		sbf.append(" where 1 = 1 ");
 		Object[] params = new Object[]{};
 		
