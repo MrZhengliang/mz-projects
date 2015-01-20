@@ -85,6 +85,8 @@ class MzInfoAction extends Action {
 			$this->redirect('MzUser/login');
  		}else{
 
+
+
 		header("Content-Type:text/html; charset=utf-8");
     	//展示所有漫展
 		$Articlecontent = M('Articlecontent');

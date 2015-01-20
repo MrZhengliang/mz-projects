@@ -1028,3 +1028,141 @@ java.lang.Exception: Generated exception.
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:155)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+!SESSION 2015-01-20 15:27:14.899 -----------------------------------------------
+eclipse.buildId=M20070212-1330
+java.version=1.5.0_09
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Warnings while parsing the view contributions from the 'org.eclipse.ui.viewActions' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction1'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction2'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction3'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewResourceNavigator/eclipseutilplugins.ResourceAction4'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction1'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction2'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction3'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-01-20 15:27:19.650
+!MESSAGE Actions require a non-empty label or definitionId: plug-in='ru.nlmk.eclipseutilplugins', id='AUTOGEN:::eclipseutilplugins.viewPackageExplorer/eclipseutilplugins.PackageAction4'
+
+!ENTRY org.eclipse.osgi 4 0 2015-01-20 15:27:29.937
+!MESSAGE While loading class "net.sourceforge.phpeclipse.PHPeclipsePlugin$3$1", thread "Worker-2" timed out waiting (5000ms) for thread "Worker-1" to finish starting bundle "net.sourceforge.phpeclipse". To avoid deadlock, thread "Worker-2" is proceeding but "net.sourceforge.phpeclipse.PHPeclipsePlugin$3$1" may not be fully initialized.
+!STACK 0
+java.lang.Exception: Generated exception.
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.preFindLocalClass(EclipseLazyStarter.java:77)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:189)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findLocalClass(BundleLoader.java:334)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:386)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:347)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:83)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at net.sourceforge.phpeclipse.PHPeclipsePlugin$3.run(PHPeclipsePlugin.java:1182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 -6 2015-01-20 15:45:07.175
+!MESSAGE org.tigris.subversion.javahl.ClientException: Unknown svn_node_kind
+svn: Error at entry 1 in entries file for 'I:\gitHub-projects\mz-projects\cos450\client\MzInfo':
+svn: Entry '' has invalid node kind
+
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: org.tigris.subversion.javahl.ClientException: Unknown svn_node_kind
+svn: Error at entry 1 in entries file for 'I:\gitHub-projects\mz-projects\cos450\client\MzInfo':
+svn: Entry '' has invalid node kind
+
+	at org.tigris.subversion.subclipse.core.SVNException.wrapException(SVNException.java:75)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:59)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.refreshStatus(StatusCacheManager.java:264)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$ChangesCollector.refreshProjectFolders(SyncFileChangeListener.java:314)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$1.run(SyncFileChangeListener.java:293)
+	at org.tigris.subversion.subclipse.core.SVNProviderPlugin$6.run(SVNProviderPlugin.java:485)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1737)
+	at org.tigris.subversion.subclipse.core.SVNProviderPlugin.run(SVNProviderPlugin.java:480)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$ChangesCollector.refreshChangedResources(SyncFileChangeListener.java:291)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener.resourceChanged(SyncFileChangeListener.java:142)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:151)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+org.tigris.subversion.subclipse.core.SVNException[-6]: org.tigris.subversion.svnclientadapter.SVNClientException: org.tigris.subversion.javahl.ClientException: Unknown svn_node_kind
+svn: Error at entry 1 in entries file for 'I:\gitHub-projects\mz-projects\cos450\client\MzInfo':
+svn: Entry '' has invalid node kind
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:443)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:418)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:411)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:54)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.refreshStatus(StatusCacheManager.java:264)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$ChangesCollector.refreshProjectFolders(SyncFileChangeListener.java:314)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$1.run(SyncFileChangeListener.java:293)
+	at org.tigris.subversion.subclipse.core.SVNProviderPlugin$6.run(SVNProviderPlugin.java:485)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1737)
+	at org.tigris.subversion.subclipse.core.SVNProviderPlugin.run(SVNProviderPlugin.java:480)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$ChangesCollector.refreshChangedResources(SyncFileChangeListener.java:291)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener.resourceChanged(SyncFileChangeListener.java:142)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:151)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+Caused by: org.tigris.subversion.javahl.ClientException: Unknown svn_node_kind
+svn: Error at entry 1 in entries file for 'I:\gitHub-projects\mz-projects\cos450\client\MzInfo':
+svn: Entry '' has invalid node kind
+
+	at org.tigris.subversion.javahl.SVNClient.status(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:431)
+	... 19 more
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 -6 2015-01-20 15:45:07.175
+!MESSAGE org.tigris.subversion.javahl.ClientException: Unknown svn_node_kind
+svn: Error at entry 1 in entries file for 'I:\gitHub-projects\mz-projects\cos450\client\MzInfo':
+svn: Entry '' has invalid node kind
+
+!STACK 0
+org.tigris.subversion.svnclientadapter.SVNClientException: org.tigris.subversion.javahl.ClientException: Unknown svn_node_kind
+svn: Error at entry 1 in entries file for 'I:\gitHub-projects\mz-projects\cos450\client\MzInfo':
+svn: Entry '' has invalid node kind
+
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:443)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:418)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:411)
+	at org.tigris.subversion.subclipse.core.status.NonRecursiveStatusUpdateStrategy.statusesToUpdate(NonRecursiveStatusUpdateStrategy.java:54)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.refreshStatus(StatusCacheManager.java:264)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$ChangesCollector.refreshProjectFolders(SyncFileChangeListener.java:314)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$1.run(SyncFileChangeListener.java:293)
+	at org.tigris.subversion.subclipse.core.SVNProviderPlugin$6.run(SVNProviderPlugin.java:485)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1737)
+	at org.tigris.subversion.subclipse.core.SVNProviderPlugin.run(SVNProviderPlugin.java:480)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener$ChangesCollector.refreshChangedResources(SyncFileChangeListener.java:291)
+	at org.tigris.subversion.subclipse.core.resourcesListeners.SyncFileChangeListener.resourceChanged(SyncFileChangeListener.java:142)
+	at org.eclipse.core.internal.events.NotificationManager$2.run(NotificationManager.java:280)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:274)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:148)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:240)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:151)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:217)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+Caused by: org.tigris.subversion.javahl.ClientException: Unknown svn_node_kind
+svn: Error at entry 1 in entries file for 'I:\gitHub-projects\mz-projects\cos450\client\MzInfo':
+svn: Entry '' has invalid node kind
+
+	at org.tigris.subversion.javahl.SVNClient.status(Native Method)
+	at org.tigris.subversion.svnclientadapter.javahl.AbstractJhlClientAdapter.getStatus(AbstractJhlClientAdapter.java:431)
+	... 19 more

@@ -81,10 +81,6 @@ class MzInfoAction extends Action {
 	 * 漫展信息未审核通过列表
 	 * */
     public function unCompleteMzList(){
-    	if($_SESSION['username'] == '' || $_SESSION['userid'] == ''){
-			$this->redirect('MzUser/login');
- 		}else{
-
 		header("Content-Type:text/html; charset=utf-8");
     	//展示所有漫展
 		$Articlecontent = M('Articlecontent');
@@ -136,7 +132,6 @@ class MzInfoAction extends Action {
 
 
 		$this->display();
-    	}
     }
     /**
 	 * 根据漫展id查询漫展信息详情

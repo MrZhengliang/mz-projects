@@ -84,6 +84,8 @@ class MzInfoAction extends Action {
     	if($_SESSION['username'] == '' || $_SESSION['userid'] == ''){
 			$this->redirect('MzUser/login');
  		}else{
+ 			$this->display();
+ 		}
 
 		header("Content-Type:text/html; charset=utf-8");
     	//展示所有漫展
@@ -136,7 +138,6 @@ class MzInfoAction extends Action {
 
 
 		$this->display();
-    	}
     }
     /**
 	 * 根据漫展id查询漫展信息详情
