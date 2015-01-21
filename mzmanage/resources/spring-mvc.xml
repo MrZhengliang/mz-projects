@@ -8,6 +8,9 @@
     http://www.springframework.org/schema/context/spring-context-3.2.xsd  
     http://www.springframework.org/schema/mvc  
     http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+    
+    <!-- 引入数据库配置 -->
+    <import resource="spring-db.xml"/>
 
 	<!-- 解决Spring MVC @ResponseBody返回中文字符串乱码问题 ,需要设置在扫描之前-->
 	<mvc:annotation-driven>

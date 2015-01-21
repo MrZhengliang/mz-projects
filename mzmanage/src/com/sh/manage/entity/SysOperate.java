@@ -25,7 +25,7 @@ import org.hibernate.annotations.GenericGenerator;
  *
  */
 @Entity
-@Table(name = "T_SYS_OPERATE", schema = "TEST_SH")
+@Table(name = "T_SYS_OPERATE", schema = "MZ")
 public class SysOperate {
 	
 
