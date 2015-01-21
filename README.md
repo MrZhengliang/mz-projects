@@ -1,2 +1,2 @@
 # mz-projects
-漫展网项目
+manzhan项目
