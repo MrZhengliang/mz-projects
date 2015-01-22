@@ -30,7 +30,7 @@ public class SPlatformDaoException extends SPlatformRuntimeException {
 	 * 默认构造器。
 	 */
 	public SPlatformDaoException() {
-		super("com.cplatform.zone12580.exception.CPlatformDaoEception: Data Access Exception");
+		super("com.splatform.manage.exception.SPlatformDaoEception: Data Access Exception");
 	}
 
 	/**

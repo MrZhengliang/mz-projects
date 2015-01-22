@@ -44,7 +44,7 @@ public class EmailBOImpl implements EmailBO {
 	 * 邮件发送方法实现,含附件 (non-Javadoc)
 	 * 
 	 * @see
-	 * com.cplatform.lnsc.pay.email.EmailBO#sendEmail(com.cplatform.lnsc.pay
+	 * com.splatform.manage.email.EmailBO#sendEmail(com.splatform.manage.pay
 	 * .email.EmailModel)
 	 */
 	public void sendEmail(EmailModel emailModel) throws Exception {
@@ -146,8 +146,8 @@ public class EmailBOImpl implements EmailBO {
 	 * 邮件发送方法实现，不带附件 (non-Javadoc)
 	 * 
 	 * @see
-	 * com.cplatform.lnsc.pay.email.EmailBO#sendEmailNoAttachFile(com.cplatform
-	 * .lnsc.pay.email.EmailModel)
+	 * com.splatform.manage.pay.email.EmailBO#sendEmailNoAttachFile(com.splatform
+	 * .manage.pay.email.EmailModel)
 	 */
 	public void sendEmailNoAttachFile(EmailModel emailModel) throws Exception {
 		/**

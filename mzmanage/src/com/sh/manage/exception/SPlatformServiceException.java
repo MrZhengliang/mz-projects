@@ -27,7 +27,7 @@ public class SPlatformServiceException extends SPlatformException {
 	 * 默认构造器。
 	 */
 	public SPlatformServiceException() {
-		super("com.cplatform.zone12580.exception.SPlatformServiceException: Service Exception");
+		super("com.splatform.manage.exception.SPlatformServiceException: Service Exception");
 	}
 
 	/**
