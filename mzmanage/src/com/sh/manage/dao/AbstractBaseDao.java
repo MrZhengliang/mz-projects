@@ -321,7 +321,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("unchecked")
 	public List<T> queryList(final String sqlStr, final Object[] paras)
 			throws SPlatformDaoException {
-		List<T> objList = new ArrayList<>();
+		List<T> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createSQLQuery(sqlStr);
 		if (null != paras && paras.length > 0) {
@@ -339,7 +339,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("unchecked")
 	public List<Object> querysqlList(final String sqlStr, final Object[] paras)
 			throws SPlatformDaoException {
-		List<T> objList = new ArrayList<>();
+		List<T> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createSQLQuery(sqlStr);
 		if (null != paras && paras.length > 0) {
@@ -380,7 +380,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("unchecked")
 	public List<T> queryhqlList(final String sqlStr, final Object[] paras)
 			throws SPlatformDaoException {
-		List<T> objList = new ArrayList<>();
+		List<T> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createQuery(sqlStr);
 		if (null != paras && paras.length > 0) {
@@ -398,7 +398,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("unchecked")
 	public Page queryList(final String sqlStr, final Object[] paras,
 			final int pageNo, final int pageSize) throws SPlatformDaoException {
-		List<T> objList = new ArrayList<>();
+		List<T> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createQuery(sqlStr);
 		if (null != paras && paras.length > 0) {
@@ -425,7 +425,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("unchecked")
 	public Page querySqlListByPage(final String sqlStr, final Object[] paras,
 			final int pageNo, final int pageSize) {
-		List<T> objList = new ArrayList<>();
+		List<T> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createSQLQuery(sqlStr);
 		if (null != paras && paras.length > 0) {
@@ -459,7 +459,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("unchecked")
 	public Page queryModelListByPage(final String sqlStr, final Object[] paras,
 			final int pageNo, final int pageSize, @SuppressWarnings("rawtypes") final Class clazz) {
-		List<T> objList = new ArrayList<>();
+		List<T> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createSQLQuery(sqlStr)
 				.addEntity(clazz);
@@ -525,7 +525,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("unchecked")
 	public List<T> queryForList(final String sqlStr, final Object[] paras,
 			final int pageNo, final int pageSize) throws SPlatformDaoException {
-		List<T> objList = new ArrayList<>();
+		List<T> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createQuery(sqlStr);
 		if (null != paras && paras.length > 0) {
@@ -600,7 +600,7 @@ public abstract class AbstractBaseDao<T> {
 	@SuppressWarnings("rawtypes")
 	protected List<?> queryModelSqlList(final String sqlStr,
 			final Object[] paras, final Class clazz) throws DataAccessException {
-		List<?> objList = new ArrayList<>();
+		List<?> objList = new ArrayList<T>();
 		int count = 0;
 		Query query = this.getCurrentSession().createSQLQuery(sqlStr)
 				.addEntity(clazz);

@@ -17,7 +17,7 @@ import org.hibernate.annotations.GenericGenerator;
  */
 
 @Entity
-@Table(name = "T_SH_USER", schema = "MZ")
+@Table(name = "t_sh_user", schema = "mz")
 public class AppUser implements Serializable {
 
 	/**

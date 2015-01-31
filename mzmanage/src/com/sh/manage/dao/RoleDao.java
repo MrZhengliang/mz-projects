@@ -11,6 +11,7 @@ import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
@@ -19,7 +20,6 @@ import org.springframework.stereotype.Repository;
 import com.sh.manage.entity.SysRole;
 import com.sh.manage.exception.SPlatformDaoException;
 import com.sh.manage.utils.SQLPagingUtils;
-import com.sun.istack.internal.logging.Logger;
 
 /**
  * 角色数据访问类

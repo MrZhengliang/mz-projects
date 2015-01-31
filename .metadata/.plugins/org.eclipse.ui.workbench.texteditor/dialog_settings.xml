@@ -8,10 +8,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=".box_l_h_c li"/>
+		<item key="selection" value="box_l_h_c"/>
 		<item key="wrap" value="false"/>
 		<item key="casesensitive" value="false"/>
 		<list key="findhistory">
+			<item value="box_l_h_c"/>
+			<item value="box_l_h"/>
+			<item value="box_l_h_time_ul"/>
 			<item value=".box_l_h_c li"/>
 		</list>
 		<list key="replacehistory">

@@ -50,6 +50,9 @@ public class ButtonTag extends TagSupport {
 	// 标签编码
 	private String modelCode = null;
 	
+	
+	private Integer _modelCode = null;
+	
 //	static{
 //		BTN_MAP.put("add_btn", "添加");
 //		BTN_MAP.put("edit_btn", "修改");
@@ -110,20 +113,20 @@ public class ButtonTag extends TagSupport {
 				// 有权限 显示操作按钮
 //				out.println("<a href='" + url + "' class='btn btn-minier btn-info'><img src='"
 //						+ image + "' alt='" + alt + "' />" + value + "</a>");
-				switch (modelCode) {
-				case Constants.ADD_BTN:
+				switch (_modelCode) {
+				case Constants._ADD_BTN:
 					out.println("<a href='" + url + "' class='btn btn-sm btn-info'><img src='"
 							+ image + "' alt='" + alt + "' />" + value + "</a>");
 					break;
-				case Constants.EDIT_BTN:
+				case Constants._EDIT_BTN:
 					out.println("<a href='" + url + "' class='btn btn-sm btn-primary'><img src='"
 							+ image + "' alt='" + alt + "' />" + value + "</a>");
 					break;
-				case Constants.DEL_BTN:
+				case Constants._DEL_BTN:
 					out.println("<a href='" + url + "' class='btn btn-sm btn-danger'><img src='"
 							+ image + "' alt='" + alt + "' />" + value + "</a>");
 					break;
-				case Constants.QUERY_BTN:
+				case Constants._QUERY_BTN:
 					out.println("<a href='" + url + "' class='btn btn-minier btn-info'><img src='"
 							+ image + "' alt='" + alt + "' />" + value + "</a>");
 					break;

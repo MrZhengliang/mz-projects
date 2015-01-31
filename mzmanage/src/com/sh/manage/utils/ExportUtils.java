@@ -11,12 +11,12 @@ import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.RandomStringUtils;
+import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
-import com.sun.istack.internal.logging.Logger;
 
 /**
  * Title. 导出用工具类<br>
@@ -99,7 +99,7 @@ public class ExportUtils {
 			return FileUtils.openInputStream(xlfFile);
 		} catch (IOException e) {
 
-			logger.warning("导出CSV文件流出现异常!", e);
+			logger.warn("导出CSV文件流出现异常!", e);
 
 			throw e;
 		}
@@ -188,7 +188,7 @@ public class ExportUtils {
 			return FileUtils.openInputStream(xlfFile);
 		} catch (IOException e) {
 
-			logger.warning("导出EXCEL文件流出现异常!", e);
+			logger.warn("导出EXCEL文件流出现异常!", e);
 
 			throw e;
 		}
@@ -254,7 +254,7 @@ public class ExportUtils {
 		try {
 			return FileUtils.openInputStream(xlfFile);
 		} catch (IOException e) {
-			logger.warning("导出TXT文件流出现异常!", e);
+			logger.warn("导出TXT文件流出现异常!", e);
 			throw e;
 		}
 	}

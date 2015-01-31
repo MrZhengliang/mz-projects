@@ -6,10 +6,11 @@ package com.sh.manage.dao;
 import java.util.List;
 
 
+
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import com.sh.manage.entity.SysOperate;
-import com.sun.istack.internal.logging.Logger;
 
 /**
  * 角色数据访问类
