@@ -246,6 +246,8 @@ class MzInfoAction extends Action {
 		$data["netticketaddress"] = $_POST['net_sell'];//网络售票地址
 		$data["content"] = $_POST['content'];//简介
 
+		$data["status"] = 0;//状态默认为0；需要后台审核 漫展状态，0 待审核；1 已审核,上线； 9 下线。
+
 		$data["faceimg"] = $_POST['faceImg'];//封面图片地址id
 		//var_dump($data);
 

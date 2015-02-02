@@ -28,6 +28,12 @@ public class Constants {
 	public static final String EDIT_BTN = "edit_btn";
 	public static final String DEL_BTN = "del_btn";
 	public static final String QUERY_BTN = "query_btn";
+	
+	// 按钮声明
+	public static final int _ADD_BTN = 1;
+	public static final int _EDIT_BTN = 2;
+	public static final int _DEL_BTN = 3;
+	public static final int _QUERY_BTN = 4;
 
 	// 超级管理员
 	public static final String USER_NAME = "admin";
