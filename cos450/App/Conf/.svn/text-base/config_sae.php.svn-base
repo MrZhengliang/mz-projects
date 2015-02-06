@@ -22,6 +22,8 @@ return array(
 
 	'URL_PATHINFO_DEPR'=>'/',//修改URL的分隔符
 
+	'URL_CASE_INSENSITIVE'=>true,//大小写不敏感
+
 	//配置模版渲染
 	'LAYOUT_ON'=>false,
 

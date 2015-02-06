@@ -11,6 +11,3 @@ var sub=function(){
 	}
 }
 
-
-
-

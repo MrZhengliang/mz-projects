@@ -14,7 +14,7 @@ import javax.persistence.Table;
  * TMzAttachment entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name="t_mz_attachment"
+@Table(name="t_sys_attachment"
     ,schema="mz"
 )
 

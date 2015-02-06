@@ -12,7 +12,7 @@ if (document.documentElement && document.documentElement.scrollTop && document.d
 
 /*切换地区*/
 
-var vHomeURL="http://www.cos450.com/cos450/area";
+var vHomeURL="http://www.cos405.com/happy95/1/area";
 var areaCodeItems = new Array('31','421','511','441','111','531','422');
 var areaNickItems = new Array('sh','wh','cd','gz','bj','km','hs');
 var areaNameItems = new Array('上海','武汉','成都','广州','北京','昆明','黄石');

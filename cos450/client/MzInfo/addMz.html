@@ -115,14 +115,14 @@
 						<div class="lwf mb10">
 							<div class="left" style="width:120px;">开始时间：</div>
 							<div class="left mr20">
-								<input type="text" id="startDate" name="startDate" style="width:120px;" value=""/>
+								<input type="text" id="startDate" name="startDate" style="width:90px;" onclick="opcal();" value=""/>
 				          		<input type="hidden" name="startTime" id="startTime" value="${startDate}"/>
 							</div>
 						</div>
 
 						<div class="lwf mb10"> <div class="left" style="width:120px;">结束时间：</div>
 							<div class="left">
-								<input type="text" id="endDate" name="endDate"  style="width:120px;" value=""/>
+								<input type="text" id="endDate" name="endDate"  style="width:90px;" onclick="opcal();" value=""/>
 				          		<input type="hidden" name="endTime" id="endTime" value="${endDate}" />
 				          	</div>
 						</div>
@@ -194,8 +194,9 @@
 <script src="__JS__/SWFUpload/swfupload/swfupload.js" type="text/javascript"></script>
 <script src="__JS__/jquery.cookie.js" type="text/javascript"></script>
 <script src="__JS__/mzuser/mzinfo.js" type="text/javascript"></script>
-
-
+<script src="__JS__/date/lhgcalendar/lhgcore.min.js" type="text/javascript"></script>
+<script src="__JS__/date/lhgcalendar/lhgcalendar.min.js" type="text/javascript"></script>
+<script src="__JS__/date/lhgcalendar/openlhgcalendar.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=1jwM1UGS8wPTvaiUSUaUnuOG"></script>
 <script type="text/javascript">
@@ -203,9 +204,9 @@
 	    var MODULE = "__MODULE__";
 	    var CONTROLLER = "__CONTROLLER__";
 	    var ACTION = "__ACTION__";
-
-		var swfu;
 		cookiesifo = "PHPSESSID=<?php echo session_id(); ?>";
+		var swfu;
+
 		window.onload = function() {
 			var settings = {
 				flash_url : "__JS__/SWFUpload/swfupload/swfupload.swf",
@@ -509,13 +510,4 @@
 
 		$("#mzForm").attr("action","__URL__/doAddMz").submit();
 	});
-</script>
-
-
-<script src="__JS__/bootstrap.min.js" type="text/javascript"></script>
-<script src="__JS__/date/bootstrap-datetimepicker.js" type="text/javascript"></script>
-
-<script>
-	$('#startDate').datetimepicker({format:'yyyy-mm-dd hh:ii:ss',language: 'ch',autoclose:'true'});
-  	$('#endDate').datetimepicker({format:'yyyy-mm-dd hh:ii:ss',language: 'ch',autoclose:'true'});
 </script>

@@ -1,7 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 23
-/happy95/!svn/ver/163/1
+/happy95/!svn/ver/221/1
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/happy95/!svn/ver/220/1/.project
 END
 config.yaml
 K 25

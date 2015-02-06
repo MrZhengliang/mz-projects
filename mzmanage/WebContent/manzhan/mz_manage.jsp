@@ -394,7 +394,6 @@
 													<th>举办地</th>
 													<th>联系电话</th>
 													<th>QQ</th>
-													<th>邮箱</th>
 													
 													<th>开始时间</th>
 													<th>结束时间</th>
@@ -417,7 +416,6 @@
 														<td>${article.cityname}</td>
 														<td>${article.telephone}</td>
 														<td>${article.qqcode}</td>
-														<td>${article.email}</td>
 														
 														<td>${article.starttime}</td>
 														<td>${article.closetime}</td>
@@ -493,16 +491,7 @@
 	<script src="<%=path %>/static/assets/js/bootstrap.min.js"></script>
 	<script src="<%=path %>/static/assets/js/typeahead-bs2.min.js"></script>
 
-	<!-- page specific plugin scripts -->
 
-	<script
-		src="<%=path %>/static/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="<%=path %>/static/assets/js/jquery.ui.touch-punch.min.js"></script>
-	<script src="<%=path %>/static/assets/js/jquery.slimscroll.min.js"></script>
-	<script src="<%=path %>/static/assets/js/jquery.easy-pie-chart.min.js"></script>
-	<script src="<%=path %>/static/assets/js/jquery.sparkline.min.js"></script>
-	<script src="<%=path %>/static/assets/js/flot/jquery.flot.min.js"></script>
-	<script src="<%=path %>/static/assets/js/flot/jquery.flot.pie.min.js"></script>
 	<script
 		src="<%=path %>/static/assets/js/flot/jquery.flot.resize.min.js"></script>
 	<script src="<%=path %>/static/js/chosen.jquery.min.js"></script>
