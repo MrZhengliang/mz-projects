@@ -10,7 +10,6 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import com.sh.manage.entity.AppUser;
 import com.sh.manage.entity.SysRole;
 import com.sh.manage.entity.SysUser;
 import com.sh.manage.entity.TMzUser;

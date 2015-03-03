@@ -19,6 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="net.sourceforge.phpeclipse.PHPUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -35,42 +36,18 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="mzinfo.css" partName="mzinfo.css" path="I:/gitHub-projects/mz-projects/cos450/client/Public/css/mzuser/mzinfo.css" title="mzinfo.css" tooltip="cos450/client/Public/css/mzuser/mzinfo.css" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/client/Public/css/mzuser/mzinfo.css"/>
-</editor>
-<editor id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="mzList.html" partName="mzList.html" path="I:/gitHub-projects/mz-projects/cos450/client/MzInfo/mzList.html" title="mzList.html" tooltip="cos450/client/MzInfo/mzList.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/client/MzInfo/mzList.html"/>
-</editor>
-<editor id="net.sourceforge.phpeclipse.PHPUnitEditor" name="MzInfoAction.class.php" partName="MzInfoAction.class.php" path="I:/gitHub-projects/mz-projects/cos450/App/Lib/Action/MzInfoAction.class.php" title="MzInfoAction.class.php" tooltip="cos450/App/Lib/Action/MzInfoAction.class.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/App/Lib/Action/MzInfoAction.class.php"/>
-</editor>
-<editor id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="addMz.html" partName="addMz.html" path="I:/gitHub-projects/mz-projects/cos450/client/MzInfo/addMz.html" title="addMz.html" tooltip="cos450/client/MzInfo/addMz.html" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="addMz.html" partName="addMz.html" path="I:/gitHub-projects/mz-projects/cos450/client/MzInfo/addMz.html" title="addMz.html" tooltip="cos450/client/MzInfo/addMz.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/client/MzInfo/addMz.html"/>
 </editor>
-<editor activePart="true" focus="true" id="net.sourceforge.phpeclipse.PHPUnitEditor" name="config.php" partName="config.php" path="I:/gitHub-projects/mz-projects/cos450/App/Conf/config.php" title="config.php" tooltip="cos450/App/Conf/config.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/App/Conf/config.php"/>
+<editor id="net.sourceforge.phpeclipse.PHPUnitEditor" name="PublicAction.class.php" partName="PublicAction.class.php" path="I:/gitHub-projects/mz-projects/cos450/App/Lib/Action/PublicAction.class.php" title="PublicAction.class.php" tooltip="cos450/App/Lib/Action/PublicAction.class.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/App/Lib/Action/PublicAction.class.php"/>
 </editor>
-<editor id="net.sourceforge.phpeclipse.PHPUnitEditor" name="conn.php" partName="conn.php" path="I:/gitHub-projects/mz-projects/cos450/App/Conf/conn.php" title="conn.php" tooltip="cos450/App/Conf/conn.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/App/Conf/conn.php"/>
-</editor>
-<editor id="net.sourceforge.phpeclipse.PHPUnitEditor" name="index.php" partName="index.php" path="I:/gitHub-projects/mz-projects/cos450/index.php" title="index.php" tooltip="cos450/index.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/index.php"/>
-</editor>
-<editor id="net.sourceforge.phpeclipse.PHPUnitEditor" name="runtime.php" partName="runtime.php" path="I:/gitHub-projects/mz-projects/cos450/ThinkPHP/Common/runtime.php" title="runtime.php" tooltip="cos450/ThinkPHP/Common/runtime.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/ThinkPHP/Common/runtime.php"/>
-</editor>
-<editor id="net.sourceforge.phpeclipse.PHPUnitEditor" name="ThinkTemplate.class.php" partName="ThinkTemplate.class.php" path="I:/gitHub-projects/mz-projects/cos450/ThinkPHP/Lib/Template/ThinkTemplate.class.php" title="ThinkTemplate.class.php" tooltip="cos450/ThinkPHP/Lib/Template/ThinkTemplate.class.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/ThinkPHP/Lib/Template/ThinkTemplate.class.php"/>
+<editor id="org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart" name="fileprogress.js" partName="fileprogress.js" path="I:/gitHub-projects/mz-projects/cos450/client/Public/js/SWFUpload/js/fileprogress.js" title="fileprogress.js" tooltip="cos450/client/Public/js/SWFUpload/js/fileprogress.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cos450/client/Public/js/SWFUpload/js/fileprogress.js"/>
 </editor>
 </editors>
 <views>
@@ -98,15 +75,22 @@
 <expanded>
 <element path="/cos450"/>
 <element path="/cos450/App"/>
-<element path="/cos450/App/Conf"/>
+<element path="/cos450/App/Lib"/>
+<element path="/cos450/App/Lib/Action"/>
+<element path="/cos450/client"/>
+<element path="/cos450/client/MzInfo"/>
+<element path="/cos450/client/Public"/>
+<element path="/cos450/client/Public/js"/>
+<element path="/cos450/client/Public/js/SWFUpload"/>
+<element path="/cos450/client/Public/js/SWFUpload/js"/>
 </expanded>
 <selection>
-<element path="/cos450/App/Conf/config.php"/>
+<element path="/cos450/client/Public/js/SWFUpload/js/handlers.js"/>
 </selection>
 </viewState>
 </view>
 </views>
-<perspectives activePart="net.sourceforge.phpeclipse.PHPUnitEditor" activePerspective="org.eclipse.ui.resourcePerspective">
+<perspectives activePart="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" activePerspective="org.eclipse.ui.resourcePerspective">
 <perspective editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="AnyEdit.actionSet"/>
@@ -132,7 +116,7 @@
 <show_view_action id="org.eclipse.ui.views.TaskList"/>
 <show_view_action id="org.eclipse.ant.ui.views.AntView"/>
 <show_view_action id="org.eclipse.pde.runtime.LogView"/>
-<show_in_time id="net.sourceforge.phpeclipse.webbrowser.views" time="1422684730284"/>
+<show_in_time id="net.sourceforge.phpeclipse.webbrowser.views" time="1422974932831"/>
 <new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
 <new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
 <new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
@@ -197,158 +181,153 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/App/Conf/config_sae.php"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/App/Conf/config.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" path="/cos450/client/MzInfo/addMz.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/App/Lib/Action/MzInfoAction.class.php"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/index.php"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/cos450/.htaccess"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/cos450/config.yaml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/ThinkPHP/Common/runtime.php"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/ThinkPHP/Lib/Template/ThinkTemplate.class.php"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" path="/cos450/client/MzInfo/mzList.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/cos450/client/Public/css/mzuser/mzinfo.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/App/Conf/config.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" path="/cos450/client/MzInfo/addMz.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" path="/cos450/App/Lib/Action/PublicAction.class.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart" path="/cos450/client/Public/js/SWFUpload/js/fileprogress.js"/>
 </editors>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="330" y="0"/>
+<item historyLabel="config.php" index="0">
+<position info="not_deleted" x="365" y="0"/>
 </item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="2496" y="0"/>
+<item historyLabel="config.php" index="0">
+<position info="not_deleted" x="438" y="0"/>
 </item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="6558" y="138"/>
+<item historyLabel="config.php" index="0">
+<position info="not_deleted" x="443" y="0"/>
 </item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="2756" y="0"/>
-</item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="2756" y="0"/>
-</item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="2756" y="0"/>
-</item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="2756" y="0"/>
-</item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="4677" y="0"/>
-</item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="2756" y="0"/>
-</item>
-<item historyLabel="MzInfoAction.class.php" index="2">
-<position info="not_deleted" x="2566" y="0"/>
-</item>
+<item historyLabel="addMz.html" index="1"/>
 <item historyLabel="MzInfoAction.class.php" index="2">
 <position info="not_deleted" x="2754" y="0"/>
 </item>
-<item historyLabel="index.php" index="3">
-<position info="not_deleted" x="258" y="0"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="2832" y="0"/>
 </item>
-<item historyLabel="index.php" index="3">
-<position info="not_deleted" x="232" y="10"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="7630" y="16"/>
 </item>
-<item historyLabel="index.php" index="3">
-<position info="not_deleted" x="197" y="24"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="7741" y="0"/>
 </item>
-<item historyLabel="index.php" index="3">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="index.php" index="3">
-<position info="not_deleted" x="0" y="5"/>
-</item>
-<item historyLabel="index.php" index="3">
-<position info="not_deleted" x="260" y="0"/>
-</item>
-<item historyLabel=".htaccess" index="4">
+<item historyLabel="MzInfoAction.class.php" index="2">
 <position/>
 </item>
-<item historyLabel="config.yaml" index="5">
+<item historyLabel="MzInfoAction.class.php" index="2">
 <position/>
 </item>
-<item historyLabel=".htaccess" index="4">
-<position info="not_deleted" x="0" y="179"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="7739" y="0"/>
 </item>
-<item historyLabel="index.php" index="3">
-<position info="not_deleted" x="260" y="0"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position/>
 </item>
-<item historyLabel="runtime.php" index="6">
-<position info="not_deleted" x="724" y="0"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position/>
 </item>
-<item historyLabel="ThinkTemplate.class.php" index="7">
-<position info="not_deleted" x="4621" y="15"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="7324" y="0"/>
 </item>
-<item historyLabel="ThinkTemplate.class.php" index="7">
-<position info="not_deleted" x="4714" y="0"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position/>
 </item>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="330" y="0"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="7739" y="0"/>
 </item>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="288" y="0"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="7713" y="0"/>
 </item>
-<item historyLabel="config_sae.php" index="0">
-<position info="not_deleted" x="758" y="5"/>
+<item historyLabel="MzInfoAction.class.php" index="2">
+<position info="not_deleted" x="7712" y="0"/>
 </item>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="288" y="0"/>
+<item historyLabel="addMz.html" index="3"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="203" y="0"/>
 </item>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="445" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="331" y="0"/>
 </item>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="377" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="650" y="6"/>
 </item>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="443" y="2"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="726" y="10"/>
 </item>
-<item historyLabel="config.php" index="1">
-<position info="not_deleted" x="443" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1012" y="40"/>
 </item>
-<item historyLabel="mzList.html" index="8"/>
-<item historyLabel="mzinfo.css" index="9">
-<position info="not_deleted" x="4377" y="58"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1108" y="29"/>
 </item>
-<item historyLabel="mzList.html" index="8"/>
-<item historyLabel="mzinfo.css" index="9">
-<position info="not_deleted" x="4373" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1237" y="5"/>
 </item>
-<item historyLabel="mzList.html" index="8"/>
-<item historyLabel="mzinfo.css" index="9">
-<position info="not_deleted" x="2504" y="293"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1407" y="0"/>
 </item>
-<item historyLabel="mzList.html" index="8"/>
-<item historyLabel="mzinfo.css" index="9">
-<position info="not_deleted" x="4598" y="13"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1388" y="5"/>
 </item>
-<item historyLabel="mzList.html" index="8"/>
-<item historyLabel="mzinfo.css" index="9">
-<position info="not_deleted" x="4598" y="13"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1394" y="1"/>
 </item>
-<item historyLabel="config.php" index="10">
-<position info="not_deleted" x="443" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1622" y="0"/>
 </item>
-<item historyLabel="config.php" index="10">
-<position info="not_deleted" x="192" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1598" y="5"/>
 </item>
-<item historyLabel="config.php" index="10">
-<position info="not_deleted" x="464" y="4"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1637" y="5"/>
 </item>
-<item historyLabel="config.php" index="10">
-<position info="not_deleted" x="469" y="6"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1598" y="5"/>
 </item>
-<item historyLabel="config.php" index="10">
-<position info="not_deleted" x="527" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1637" y="5"/>
 </item>
-<item historyLabel="config.php" index="10">
-<position info="not_deleted" x="365" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1487" y="5"/>
 </item>
-<item historyLabel="config.php" index="10">
-<position info="not_deleted" x="438" y="0"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1414" y="0"/>
 </item>
-<item active="true" historyLabel="config.php" index="10">
-<position info="not_deleted" x="443" y="66"/>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1492" y="5"/>
 </item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1563" y="6"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1571" y="6"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="726" y="10"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="732" y="0"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="753" y="7"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1021" y="8"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1012" y="0"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="1057" y="31"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="2998" y="11"/>
+</item>
+<item historyLabel="PublicAction.class.php" index="4">
+<position info="not_deleted" x="2864" y="0"/>
+</item>
+<item historyLabel="addMz.html" index="3"/>
+<item historyLabel="fileprogress.js" index="5"/>
+<item active="true" historyLabel="addMz.html" index="3"/>
 </navigationHistory>
 <stickyState/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -367,6 +346,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart" name="fileprogress.js" tooltip="cos450/client/Public/js/SWFUpload/js/fileprogress.js">
+<persistable path="/cos450/client/Public/js/SWFUpload/js/fileprogress.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" name="PublicAction.class.php" tooltip="cos450/App/Lib/Action/PublicAction.class.php">
+<persistable path="/cos450/App/Lib/Action/PublicAction.class.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="addMz.html" tooltip="cos450/client/MzInfo/addMz.html">
+<persistable path="/cos450/client/MzInfo/addMz.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" name="MzInfoAction.class.php" tooltip="cos450/App/Lib/Action/MzInfoAction.class.php">
+<persistable path="/cos450/App/Lib/Action/MzInfoAction.class.php"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" name="ThinkTemplate.class.php" tooltip="cos450/ThinkPHP/Lib/Template/ThinkTemplate.class.php">
 <persistable path="/cos450/ThinkPHP/Lib/Template/ThinkTemplate.class.php"/>
 </file>
@@ -390,12 +381,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" name="config_sae.php" tooltip="cos450/App/Conf/config_sae.php">
 <persistable path="/cos450/App/Conf/config_sae.php"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="addMz.html" tooltip="cos450/client/MzInfo/addMz.html">
-<persistable path="/cos450/client/MzInfo/addMz.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="net.sourceforge.phpeclipse.PHPUnitEditor" name="MzInfoAction.class.php" tooltip="cos450/App/Lib/Action/MzInfoAction.class.php">
-<persistable path="/cos450/App/Lib/Action/MzInfoAction.class.php"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tk.eclipse.plugin.htmleditor.editors.HTMLEditor" name="mzList.html" tooltip="cos450/client/MzInfo/mzList.html">
 <persistable path="/cos450/client/MzInfo/mzList.html"/>
