@@ -234,15 +234,14 @@ h2{
 .box_l_h_c{
 	margin-top: 20px;
 	float: left;
-    padding: 10px;
-    width: 660px;
+    padding: 15px;
+    width: 650px;
 	background-color: #EFEFEF;
     border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     margin-top: 0 !important;
     overflow: hidden;
-
-    list_style:none;
+	list-style: none outside none;
 }
 
 .box_l_h_c_show{
@@ -251,13 +250,8 @@ h2{
     position: relative;
 	transition-property: height, width;
 	transition-duration: 0.4s;
-}
-
-.box_l_h_c li{
-
-    display:block;
-    float:left;
-    margin:20px 0 0 20px;
+	margin-left: -10px;
+    width: 700px;
 }
 
 .box_l_empty_block{
@@ -265,12 +259,17 @@ h2{
 }
 
 .mzinfo_box_l ul .box_l_h_c_li{
-
+	left:0;
+	position: absolute;
+	top: 0;
 	transition-property: transform, opacity;
 	transition-duration: 0.4s;
-	width: 310px;
+	margin-left: 6px;
+    margin-right: 10px;
+	width: 320px;
 	z-index:2;
-
+	loat: left;
+	list-style-type: none;
 }
 
 .img_show{

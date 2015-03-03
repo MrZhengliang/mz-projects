@@ -1,4 +1,7 @@
 # Built application files
 Cache
 
-*.svn
+*.svn/mzmanage
+/mzmanage
+
+cos450/client/MzInfo/addMz.html

@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "FriendSmashParseSimple": {
+            "applicationId": "ILQ3MtsLG2uv7ZHFMm7ZHoE8BIAKwA1SySejgYDj", 
+            "masterKey": "3zX5D8GYtHCSVSdZcGXDcRRuP3RwT76rNe9fK7tY"
+        }, 
+        "_default": {
+            "link": "FriendSmashParseSimple"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}
