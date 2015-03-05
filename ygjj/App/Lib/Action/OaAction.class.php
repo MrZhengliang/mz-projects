@@ -128,7 +128,7 @@ class OaAction extends Action {
 
 
  	/**
- 	 *跳转到添加漫展页
+ 	 *跳转到添加客服记录页
  	 */
  	function addKf(){
  		//判断是否已经登陆
@@ -143,24 +143,11 @@ class OaAction extends Action {
 		$this->display();
  	}
 
- 	function addJhm(){
- 		//判断是否已经登陆
-// 		echo '123123123123';
-// 		var_dump($_SESSION);
-// 		if($_SESSION['username'] == '' || $_SESSION['userid'] == ''){
-//			$this->redirect('MzUser/login');
-// 		}else{
-// 			$this->display();
-// 		}
-
- 		$this->display();
- 	}
-
-	/**
-	 * 添加漫展信息方法
+ 	/**
+	 * 添加客服记录信息方法
 	 */
-	function doAddMz(){
-		//漫展发布信息表
+	function doAddKf(){
+		//客服记录信息表
 		$Articlecontent = M('Articlecontent');
 
 		$data["telephone"] = $_POST['contact_phone'];//电话
@@ -195,5 +182,63 @@ class OaAction extends Action {
 			$this->redirect('MzInfo/mzList');
 		}
  	}
+
+
+
+	/**
+ 	 *跳转到添加激活码页
+ 	 */
+ 	function addJhm(){
+ 		//判断是否已经登陆
+// 		echo '123123123123';
+// 		var_dump($_SESSION);
+// 		if($_SESSION['username'] == '' || $_SESSION['userid'] == ''){
+//			$this->redirect('MzUser/login');
+// 		}else{
+// 			$this->display();
+// 		}
+
+ 		$this->display();
+ 	}
+	/**
+	 * 添加激活码信息方法
+	 */
+	function doAddKf(){
+		//激活码信息表
+		$Articlecontent = M('Articlecontent');
+
+		$data["telephone"] = $_POST['contact_phone'];//电话
+		$data["qqcode"] = $_POST['contact_qq'];      //qq
+		$data["email"] = $_POST['contact_email'];    //邮箱
+
+		$data["uid"] = $_POST['userId'];    //userid
+
+		$data["title"] = $_POST['title'];//漫展名称
+		$data["privurl"] = $_POST['url'];//个性域名
+		$data["cityname"] = $_POST['cityname'];//城市名
+		$data["lng"] = $_POST['lng'];//地图经度
+		$data["lat"] = $_POST['lat'];//地图纬度
+		$data["address"] = $_POST['address'];//详细地址
+
+		$data["starttime"] = strtotime($_POST['startDate']);//开始时间
+		$data["closetime"] = strtotime($_POST['endDate']);//结束时间
+
+ 		$data["pricetype"] = $_POST['fee_opt'];//票价类型
+ 		$data["price"] = $_POST['price'];//票价
+
+		$data["tickettype"] = $_POST['ticket'];//订票方式
+		$data["netticketaddress"] = $_POST['net_sell'];//网络售票地址
+		$data["content"] = $_POST['content'];//简介
+
+		$data["faceimg"] = $_POST['faceImg'];//封面图片地址id
+		//var_dump($data);
+
+		$idNum = $Articlecontent->add($data);
+		if($idNum>0){
+			//添加成功,跳转到列表页
+			$this->redirect('MzInfo/mzList');
+		}
+ 	}
+
 }
 ?>

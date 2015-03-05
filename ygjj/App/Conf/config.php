@@ -10,13 +10,13 @@ return array(
 	'TMPL_L_DELIM'=>'<{',//修改左定界符
 	'TMPL_R_DELIM'=>'}>',//修改右定界符
 
-	'DB_PREFIX'=>'t_mz_',//表名前缀
+	'DB_PREFIX'=>'t_ygjj_',//表名前缀
 
 	'SHOW_PAGE_TRACE'=>true,//开启页面trace
 
 	//'URL_CASE_INSENSITIVE'=>true,//大小写不敏感
 
-	'DB_DSN'=>'mysql://root:123@localhost:3306/mz',//使用DSN方式配置数据库
+	'DB_DSN'=>'mysql://root:123@localhost:3306/ygjj',//使用DSN方式配置数据库
 
 	//'DB_DSN'=>'mysql://root:sql405@localhost:3306/mz',//使用DSN方式配置数据库
 
