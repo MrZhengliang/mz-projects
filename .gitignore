@@ -5,3 +5,5 @@ Cache
 *.svn
 *.build
 *classes
+
+*.settings
