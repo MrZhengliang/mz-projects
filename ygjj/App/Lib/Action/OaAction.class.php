@@ -16,53 +16,7 @@ class OaAction extends Action {
 		parent :: __construct();
 	}
 
-	/**
-	 * 漫展信息
-	 * */
-    public function oaList(){
-		header("Content-Type:text/html; charset=utf-8");
-    	//展示所有漫展
-		$Articlecontent = M('Articlecontent');
 
-		$data['starttime']=time();
-
-		//$date['cid']='6';
-		//$arr = $Articlecontent->where($data)->find();
-
-		//var_dump($data);
-
-
-
-		//var_dump(date('y-m-d'));
-
-		//var_dump($this->getWeekRange(date('y-m-d')));
-
-
-		$dateDest = $this->getWeekRange(date('y-m-d'));//获取当前周的时间
-
-		//var_dump($dateDest);
-
-		//var_dump($dateDest['sdate']);
-		//var_dump($dateDest['edate']);
-
-
-		$data['starttime']=array('EGT',$dateDest['sdate']);//开始时间大于一周内的初始时间
-		$data['closetime']=array('ELT',$dateDest['edate']);//开始时间大于一周内的初始时间
-
-		//$arr = $Articlecontent->where($data)->select();
-		//->join('RIGHT JOIN t_mz_attachment ON t_mz_attachment.aid = user_profile.typeid' );
-		$sql = 'select article.cid,article.title,article.starttime,article.closetime,article.address,article.cityname,article.faceimg,attach.filename,attach.newfilename ' .
-				'from t_mz_articlecontent as article, t_mz_attachment as attach where 1=1 ' .
-				' and article.faceimg=attach.aid ' .
-				' and article.starttime >= '.$dateDest['sdate'].'' .
-						' and article.closetime <= '.$dateDest['edate'];
-		$voList = $Articlecontent->query($sql);
-		//var_dump($voList);
-
-		$this->assign('data',$voList);
-		//$this->assign('arr',$arr);
-    	$this->display();
-    }
 
     /**
 	 * 根据漫展id查询漫展信息详情
@@ -183,6 +137,54 @@ class OaAction extends Action {
 		}
  	}
 
+	/**
+	 * 客服记录列表信息
+	 * */
+    public function oaKfList(){
+		header("Content-Type:text/html; charset=utf-8");
+    	//展示所有漫展
+		$Articlecontent = M('Articlecontent');
+
+		$data['starttime']=time();
+
+		//$date['cid']='6';
+		//$arr = $Articlecontent->where($data)->find();
+
+		//var_dump($data);
+
+
+
+		//var_dump(date('y-m-d'));
+
+		//var_dump($this->getWeekRange(date('y-m-d')));
+
+
+		$dateDest = $this->getWeekRange(date('y-m-d'));//获取当前周的时间
+
+		//var_dump($dateDest);
+
+		//var_dump($dateDest['sdate']);
+		//var_dump($dateDest['edate']);
+
+
+		$data['starttime']=array('EGT',$dateDest['sdate']);//开始时间大于一周内的初始时间
+		$data['closetime']=array('ELT',$dateDest['edate']);//开始时间大于一周内的初始时间
+
+		//$arr = $Articlecontent->where($data)->select();
+		//->join('RIGHT JOIN t_mz_attachment ON t_mz_attachment.aid = user_profile.typeid' );
+		$sql = 'select article.cid,article.title,article.starttime,article.closetime,article.address,article.cityname,article.faceimg,attach.filename,attach.newfilename ' .
+				'from t_mz_articlecontent as article, t_mz_attachment as attach where 1=1 ' .
+				' and article.faceimg=attach.aid ' .
+				' and article.starttime >= '.$dateDest['sdate'].'' .
+						' and article.closetime <= '.$dateDest['edate'];
+		$voList = $Articlecontent->query($sql);
+		//var_dump($voList);
+
+		$this->assign('data',$voList);
+		//$this->assign('arr',$arr);
+    	$this->display();
+    }
+
 
 
 	/**
@@ -239,6 +241,54 @@ class OaAction extends Action {
 			$this->redirect('MzInfo/mzList');
 		}
  	}
+
+ 	/**
+	 * 激活码列表信息
+	 * */
+    public function oaKfList(){
+		header("Content-Type:text/html; charset=utf-8");
+    	//展示所有漫展
+		$Articlecontent = M('Articlecontent');
+
+		$data['starttime']=time();
+
+		//$date['cid']='6';
+		//$arr = $Articlecontent->where($data)->find();
+
+		//var_dump($data);
+
+
+
+		//var_dump(date('y-m-d'));
+
+		//var_dump($this->getWeekRange(date('y-m-d')));
+
+
+		$dateDest = $this->getWeekRange(date('y-m-d'));//获取当前周的时间
+
+		//var_dump($dateDest);
+
+		//var_dump($dateDest['sdate']);
+		//var_dump($dateDest['edate']);
+
+
+		$data['starttime']=array('EGT',$dateDest['sdate']);//开始时间大于一周内的初始时间
+		$data['closetime']=array('ELT',$dateDest['edate']);//开始时间大于一周内的初始时间
+
+		//$arr = $Articlecontent->where($data)->select();
+		//->join('RIGHT JOIN t_mz_attachment ON t_mz_attachment.aid = user_profile.typeid' );
+		$sql = 'select article.cid,article.title,article.starttime,article.closetime,article.address,article.cityname,article.faceimg,attach.filename,attach.newfilename ' .
+				'from t_mz_articlecontent as article, t_mz_attachment as attach where 1=1 ' .
+				' and article.faceimg=attach.aid ' .
+				' and article.starttime >= '.$dateDest['sdate'].'' .
+						' and article.closetime <= '.$dateDest['edate'];
+		$voList = $Articlecontent->query($sql);
+		//var_dump($voList);
+
+		$this->assign('data',$voList);
+		//$this->assign('arr',$arr);
+    	$this->display();
+    }
 
 }
 ?>
