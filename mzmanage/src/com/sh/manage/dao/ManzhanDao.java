@@ -93,8 +93,8 @@ public class ManzhanDao extends AbstractBaseDao<TMzArticleContent> {
 	 */
 	@Override
 	public TMzArticleContent getObject(TMzArticleContent articleContent) {
-		String hql = "from TMzArticleContent where cid=?";
-		hql += articleContent.getEmail();
+		String hql = "from TMzArticleContent where cid=";
+		hql += articleContent.getCid();
 		Query query = this.getCurrentSession().createQuery(hql);
 		return (TMzArticleContent) query.list().get(0);
 	}

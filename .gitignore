@@ -2,6 +2,6 @@
 Cache
 
 *.svn/mzmanage
-/mzmanage
-
-cos450/client/MzInfo/addMz.html
+*.svn
+*.build
+*classes

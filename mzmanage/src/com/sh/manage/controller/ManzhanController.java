@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sh.manage.constants.SessionConstants;
 import com.sh.manage.entity.TMzArticleContent;
 import com.sh.manage.module.page.Page;
+import com.sh.manage.pojo.LoginUser;
 import com.sh.manage.service.ManzhanService;
 import com.sh.manage.utils.WebUtils;
 
@@ -63,46 +66,63 @@ public class ManzhanController {
 			@RequestParam(value = "cityName", required = false, defaultValue = "") String cityName,
 			@RequestParam(value = "startDate", required = false, defaultValue = "") String startDate,
 			@RequestParam(value = "endDate", required = false, defaultValue = "") String endDate,
-			@RequestParam(value = "pageNo", required = false, defaultValue = "") Integer pageNo) {
+			@RequestParam(value = "pageNo", required = false, defaultValue = "") Integer pageNo,
+			HttpServletRequest request,HttpServletResponse response) {
+		
+		HttpSession session = request.getSession();
+		
 		// 获取漫展
 		if (null == pageNo) {
 			pageNo = initPageNo;
 		}
 		//返回漫展列表页
 		ModelAndView model = new ModelAndView("/manzhan/mz_manage");
-		model.addObject("usercode", usercode);
-		model.addObject("priceType", priceType);
-		model.addObject("cityName", cityName);
-		model.addObject("startDate", startDate);
-		model.addObject("endDate", endDate);
-		//返回的page对象
-		page = manzhanService.findAllTMzArticleContent(cityName, 
-				usercode,startDate.replaceAll("-", ""), endDate.replaceAll("-", ""), 
-				priceType == null ? 0 : priceType,pageNo, pageSize);
-		// 漫展列表
-		List<TMzArticleContent> articleContentList = (List<TMzArticleContent>) page.getList();
+		try {
+			
+			LoginUser _loginUser  = (LoginUser) session.getAttribute(SessionConstants.LOGIN_USER);
+			if(null == _loginUser){
+				//用户未登录，重定向到登陆
+				return new ModelAndView("redirect:/system/tologin.do");
+			}
+			
+			model.addObject("usercode", usercode);
+			model.addObject("priceType", priceType);
+			model.addObject("cityName", cityName);
+			model.addObject("startDate", startDate);
+			model.addObject("endDate", endDate);
+			//返回的page对象
+			page = manzhanService.findAllTMzArticleContent(cityName, 
+					usercode,startDate.replaceAll("-", ""), endDate.replaceAll("-", ""), 
+					priceType == null ? 0 : priceType,pageNo, pageSize);
+			// 漫展列表
+			List<TMzArticleContent> articleContentList = (List<TMzArticleContent>) page.getList();
 
-		
-		// 翻页带参数
-		if(null!=usercode ){
-			page.addParam("usercode",""+usercode);
+			
+			// 翻页带参数
+			if(null!=usercode ){
+				page.addParam("usercode",""+usercode);
+			}
+			if(null!=priceType && priceType>0){
+				page.addParam("priceType",""+priceType);
+			}
+			if(null != cityName){
+				page.addParam("cityName",""+cityName);
+			}
+			if(null != startDate){
+				page.addParam("startDate",""+startDate);
+			}
+			if(null != endDate){
+				page.addParam("endDate",""+endDate);
+			}		
+					
+			model.addObject("pageSize", pageSize);
+			model.addObject("page", page);
+			model.addObject("articleContentList", articleContentList);
+			
+			model.addObject("uid", _loginUser.getId());//管理员id
+		} catch (Exception e) {
+			logger.error("ManzhanController--->manZhanManagePage--error");
 		}
-		if(null!=priceType && priceType>0){
-			page.addParam("priceType",""+priceType);
-		}
-		if(null != cityName){
-			page.addParam("cityName",""+cityName);
-		}
-		if(null != startDate){
-			page.addParam("startDate",""+startDate);
-		}
-		if(null != endDate){
-			page.addParam("endDate",""+endDate);
-		}		
-				
-		model.addObject("pageSize", pageSize);
-		model.addObject("page", page);
-		model.addObject("articleContentList", articleContentList);
 		return model;
 	}
 
@@ -123,15 +143,63 @@ public class ManzhanController {
 		response.setContentType("text/html;charset=UTF-8");
 		//返回漫展列表页
 		ModelAndView model = new ModelAndView("/manzhan/mz_info");
+		
+		HttpSession session = request.getSession();
 		try{
+			
+			LoginUser _loginUser  = (LoginUser) session.getAttribute(SessionConstants.LOGIN_USER);
+			if(null == _loginUser){
+				//用户未登录，重定向到登陆
+				return new ModelAndView("redirect:/system/tologin.do");
+			}
 			//  get/new article
 			TMzArticleContent article = manzhanService.findArticleContent(Integer.parseInt(cid));
 			model.addObject("article", article);
+			
 		}catch(Exception e){
 			logger.error("controller:漫展详情查询异常!"+cid,e);
 		}
 		return model;
 	}
+	
+	
+	/**
+	 * 跳转漫展添加页面
+	 */
+	@RequestMapping(value = "/toAddMz.do", method = RequestMethod.GET)
+	public ModelAndView toAddMzPage(
+			@RequestParam(value = "uid", required = false, defaultValue = "") Integer uid,
+			HttpServletRequest request,HttpServletResponse response) {
+		logger.info("controller:..跳转漫展详情添加!");
+		HttpHeaders responseHeaders = new HttpHeaders();
+		responseHeaders.set("Content-Type", "text/html;charset=UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
+		//返回漫展添加页
+		ModelAndView model = new ModelAndView("/manzhan/mz_add");
+		
+		HttpSession session = request.getSession();
+		try{
+			
+			LoginUser _loginUser  = (LoginUser) session.getAttribute(SessionConstants.LOGIN_USER);
+			if(null == _loginUser){
+				//用户未登录，重定向到登陆
+				return new ModelAndView("redirect:/system/tologin.do");
+			}
+			
+			//new article
+			TMzArticleContent article = new TMzArticleContent();
+			article.setUid(uid);
+			manzhanService.addArticleContent(article);
+			//get article
+			//TMzArticleContent dbarticle = manzhanService.getArticleContent(article);
+			
+			model.addObject("article", article);
+		}catch(Exception e){
+			logger.error("controller:跳转漫展详情添加异常!"+uid,e);
+		}
+		return model;
+	}
+	
 	
 	/**
 	 * 当前用户的漫展添加
@@ -208,6 +276,41 @@ public class ManzhanController {
 		return new ResponseEntity<String>("<script>parent.callBack('msgdiv','" + msg + "'," + isCorrect + ");parent.close(); parent.location.href='" + WebUtils.formatURI(request, "/mzmanage.do")+"'</script>",responseHeaders, HttpStatus.CREATED);
 	}
 	
+	
+	/**
+	 * 跳转漫展修改页面
+	 */
+	@RequestMapping(value = "/toEditMz.do", method = RequestMethod.GET)
+	public ModelAndView toEditMzPage(
+			@RequestParam(value = "cid", required = false, defaultValue = "") Integer cid,
+			HttpServletRequest request,HttpServletResponse response) {
+		logger.info("controller:..跳转漫展详情修改!");
+		HttpHeaders responseHeaders = new HttpHeaders();
+		responseHeaders.set("Content-Type", "text/html;charset=UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
+		//返回漫展添加页
+		ModelAndView model = new ModelAndView("/manzhan/mz_edit");
+		
+		HttpSession session = request.getSession();
+		try{
+			
+			LoginUser _loginUser  = (LoginUser) session.getAttribute(SessionConstants.LOGIN_USER);
+			if(null == _loginUser){
+				//用户未登录，重定向到登陆
+				return new ModelAndView("redirect:/system/tologin.do");
+			}
+			
+			//new or get article
+			TMzArticleContent article = new TMzArticleContent();
+			article.setCid(cid);
+			TMzArticleContent dbarticle = manzhanService.getArticleContent(article);
+			
+			model.addObject("article", dbarticle);
+		}catch(Exception e){
+			logger.error("controller:跳转漫展详情修改异常!"+cid,e);
+		}
+		return model;
+	}
 	
 	/**
 	 * 当前下的漫展修改
