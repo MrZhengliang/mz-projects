@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta content="cos450,cosplay,coser,绘师,二次创作,漫展,acg" name="keywords">
+	<meta content="COS450是国内领先的ACG社区，最专业的中文cosplay平台，提供cosplay作品分享、Coser交流，同时提供漫展活动主页创建、信息发布、场照返图和认领、互动讨论等商务合作平台。" name="description">
+	<meta charset="UTF-8">
+	<title>二次元的空间cos450</title>
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+  <script src="__JS__/jquery-1.9.1.min.js"></script>
+  <script src="__JS__/jquery.cookie.js"></script>
+  <script src="__JS__/jquery.slides.min.js"></script>
+  <script src="__JS__/base.js" type="text/javascript"></script>
+  <load file="__CSS__/base.css"/>
+  <load file="__CSS__/bootstrap.min.css"/>
+  <load file="__CSS__/hap_common.css"/>
+ </head>
+<body>
+<!-- float div -->
+<div class="mz_content">
+	<div id="flt_logon_head"></div>
+	<!-- head -->
+	<div class="head_nav">
+		<div class="top">
+			<div class="sy_dq">
+				<a class="top_home_l"></a>
+				<a href="__APP__/Index/index">首页</a>
+				<script>
+					document.write('<a id="this_area" href="javascript:void(0);">'+thisCity()+'</a>'+
+						'<div id="area" class="area_items">'+
+							'<a class="">切换</a>'+
+							'<div id="area_locations" class="show_area" style="display:none;">'+showArea()+
+							'</div>'+
+						'</div>');
+				</script>
+			</div>
+			<div class="login">
+				<a class="top_home_r"></a>
+				<if condition="$_SESSION['username'] neq ''">
+					欢迎<{$_SESSION['username']}>来到cos450
+					<a href="__APP__/MzUser/logout">退出</a>
+					<else/>
+					<a href="__APP__/MzUser/login">登录</a>
+					<a href="__APP__/MzUser/register">注册</a>
+				</if>
+
+			</div>
+		</div>
+	</div>
+	<style>
+		.float_back{
+			left: 0;
+		    position: fixed;
+		    top: 0;
+		    width: 100%;
+		    z-index: 200;
+		    bottom: 0 !important;
+		    display: none;
+		    top: auto;
+		}
+		.float_back .float_content{
+			background: none repeat scroll 0 0 #D1D1D1;
+			padding: 15px 10px;
+			height: 26px;
+		}
+
+		#login_fldiv a.link-close{
+			color: #aaa;
+		    font-size: 25px;
+		    font-weight: lighter;
+		    line-height: 1.4;
+		    padding: 0 2px;
+		    position: absolute;
+		    right: 100px;
+		    top: 5px;
+		}
+		#login_fldiv a:hover{
+			background-color:#D1D1D1;
+		}
+		#login_fldiv p{
+			color: #072;
+		    float: left;
+		    font-size: 18px;
+		    margin: 0 60px 15px 368px;
+		}
+		#login_fldiv .mz-operation{
+			 float: left;
+    		 margin-right: 10px;
+		}
+		#login_fldiv .mz-operation a{
+			 background: none repeat scroll 0 0 #60BFD1;
+		     border: 1px solid #60BFD1;
+		     border-radius: 2px;
+		     color: #fff;
+		     display: inline-block;
+		     font-size: 14px;
+		     margin-right: 12px;
+		     padding: 3px 16px;
+		}
+		#login_fldiv label{
+			font-family: Tahoma;
+    		vertical-align: middle;
+		}
+		.mz-3rd{
+			color: #999;
+		    float: left;
+		    font-size: 15px;
+		    line-height: 26px;
+		    width: 200px;
+		}
+	</style>
+		<!-- float div -->
+		<div id="login_fldiv" class="float_back">
+		<!-- head -->
+			<div class="float_content">
+					<p>最好的漫展交流平台</p>
+					<div class="mz-operation">
+						<a class="a_show_register" href="">注册</a>
+						<a class="a_show_login" href="">登录</a>
+					</div>
+					<div class="mz-3rd">
+						<label>第三方登录</label>
+						<a class="item-qq" href="http://www.douban.com/accounts/connect/qq/?from=group&redir=http%3A//www.douban.com/accounts/join_and_redir%3Fgroup_id%3D73535" target="_top">
+							<img title="QQ" src="http://img3.douban.com/pics/connect_qq.png">
+						</a>
+						<a class="item-weibo" href="http://www.douban.com/accounts/connect/sina_weibo/?from=group&redir=http%3A//www.douban.com/accounts/join_and_redir%3Fgroup_id%3D73535&fallback=http://www.douban.com/group/Sharing/" target="_top">
+							<img title="新浪微博" src="http://img3.douban.com/pics/connect_sina_weibo.png">
+						</a>
+					</div>
+					<a class="link-close">X</a>
+			</div>
+		</div>
+		</body>

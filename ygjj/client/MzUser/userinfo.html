@@ -1,0 +1,133 @@
+<include file="Public:headerbanner" />
+	<load file="__CSS__/mzuser/userinfo.css"/>
+	<script src="__JS__/jquery-1.9.1.min.js"></script>
+
+
+	<script type="text/javascript">
+
+		var selectCity = function(){
+			//省分编码
+			var prov = $('#province').val();
+			var provname = $('#province').find('option:selected').text();
+			$('#provincename').val(provname);
+			//ajax获取地市数据
+					$.post('__URL__/ajaxGetCitys',{prov:prov},function(jsonData){
+							var jsonO = eval(jsonData);
+							//返回的地市数组
+							$('#city').empty();//清空之前数据
+							if(typeof jsonO=="object" && jsonO.length>0){
+								for(var i=0;i<jsonO.length;i++){
+									//追加地市
+									$('#city').append('<option value="'+jsonO[i]['areacode']+'" >'+jsonO[i]['areaname']+'</option>');
+								}
+								var cityname = $('#city').find('option:selected').text();
+								$('#cityname').val(cityname);
+							}else{
+								$('#city').append('<option value="'+prov+'" >'+provname+'</option>');
+								$('#cityname').val(provname);
+							}
+						},'json');
+	           		////////////
+			}
+		///确定地市
+		var submitCity = function(){
+			var cityname = $('#city').find('option:selected').text();
+			$('#cityname').val(cityname);
+		}
+		/////////////////////
+
+		$(function(){
+			flag=true;
+			var nm = $('#nick_name');
+			$('#nick_name').blur(function(){
+				if(nm.val() == ''){
+					$('#nick_name_err').text('请填写昵称!');
+					$('#nick_name').css({
+						  "border":"1px solid red"
+					 });
+					falg = false;
+				}else{
+	           		//ajax获取校验邮箱数据
+					$.post('__URL__/checkloginName',{login_name:$('#nick_name').val()},function(jsonData){
+						//alert(jsonData);
+						if(jsonData.status=='0' && $('#nick_name').val() != '<{$_SESSION['nickname']}>' ){
+							$('#nick_name_err').css('color','red').text('该昵称已被使用,请换一个!');
+							$('#nick_name').css({"border":"0px solid red"});
+							falg=false;
+						}else{
+							$('#nick_name').css("border","1px solid green");
+							$('#nick_name_err').css('color','green').text('该昵称不存在,可使用');
+							falg=true;
+						}
+						},'json');
+	           		////////////
+	           	}
+			});
+			//提交
+			$('#button').click(function(){
+				var userintro = $('#user-intro').val();
+				if(userintro.length>80){
+					alert('个人简介最多输入80字');
+					flag = false;
+					return;
+				}
+				//校验通过
+				//alert(flag);
+				if(flag){
+					$("#userForm").submit();
+					alert('保存完成');
+					window.location.reload();
+				}
+			});
+		});
+	</script>
+
+	<div class="userinfo_content">
+		<div class="right_form">
+			<h2>我的资料</h2>
+			<form name="userForm" id="userForm" action="__URL__/saveUserInfo" method="post">
+				<input id="userid" class="basic-input" type="hidden" name="userid" value="<{$user[0].uid}>"/>
+				<input id="provincename" class="basic-input" type="hidden" name="provincename" />
+				<input id="cityname" class="basic-input" type="hidden"  name="cityname" />
+				<div class="item">
+					<label>站内昵称：<{$user.email}></label><input id="nick_name" class="basic-input" type="text" name="nickname" value="<{$user[0].nickname}>"/>
+					 <span id="nick_name_err" style="color:red;font-size: 12px;width: 120px;"></span>
+				</div>
+				<div class="item">
+					<label>所在地区：</label>
+		            <select class="basic-select" id="province" name="province" onChange="selectCity()" >
+
+		            	<option value="<{$user[0].provincecode}>" selected><{$user[0].provincename}></option>
+		            	<foreach name="provinces" item="v">
+		            		<if condition="$user[0].provincecode neq $v.areacode">
+								<option value="<{$v.areacode}>" ><{$v.areaname}></option>
+		            		</if>
+		            	</foreach>
+		            </select>
+		            <select class="basic-select" id="city" name="city" onChange="submitCity()">
+		            	<if condition="$user[0].citycode neq ''">
+		            		<option value="<{$user[0].citycode}>" selected><{$user[0].cityname}></option>
+		            		<else/>
+		            		<foreach name="citys" item="v">
+			            		<option value="<{$v.areacode}>"><{$v.areaname}></option>
+			            	</foreach>
+		            	</if>
+		            </select>
+				</div>
+				<div class="item">
+					<label style="padding:0 30px 0 0px;">性别：</label>
+						<input class="basic-input" type="radio" name="usersex" value="1" id="user_sex" <if condition="$user[0]['sex'] eq 1">checked</if>/>男
+						<input class="basic-input" type="radio" name="usersex" value="2" id="user_sex" <if condition="$user[0]['sex'] eq 2">checked</if>/>女</br>
+				</div>
+				<div class="item">
+					<label style="padding:0 0 5px 5px;">个人简介:</label>
+					<textarea id="user-intro" rows="4"  name="userintro" class="basic-textarea"><{$user[0].userintro}></textarea>
+					<p class="fbase">个人简介在80个字之内</p>
+				</div>
+				<div class="item_th">
+					<input class="btn-submit" id="button" type="button" tabindex="5" name="user_login" value="保存">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
